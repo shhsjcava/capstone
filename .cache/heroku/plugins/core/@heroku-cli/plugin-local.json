@@ -1,0 +1,77 @@
+{
+  "invalidate": "6.99.0-ec9edad/5.1.24",
+  "manifest": {
+    "commands": [
+      {
+        "id": "local",
+        "_version": "12.1.1",
+        "description": "run heroku app locally",
+        "plugin": {
+          "name": "@heroku-cli/plugin-local",
+          "version": "5.1.24"
+        },
+        "hidden": false,
+        "aliases": [],
+        "help": "Usage: heroku local [PROCESSNAME] [flags]\n\nrun heroku app locally\n\nFlags:\n -e, --env ENV            location of env file (defaults to .env)\n -f, --procfile PROCFILE  use a different Procfile\n -p, --port PORT          port to listen on\n\nStart the application specified by a Procfile (defaults to ./Procfile)\n\nExamples:\n\n    heroku local\n    heroku local web\n    heroku local web=2\n    heroku local web=1,worker=2\n",
+        "helpLine": [
+          "local [PROCESSNAME]",
+          "run heroku app locally"
+        ]
+      },
+      {
+        "id": "local:start",
+        "_version": "12.1.1",
+        "description": "run heroku app locally",
+        "plugin": {
+          "name": "@heroku-cli/plugin-local",
+          "version": "5.1.24"
+        },
+        "hidden": false,
+        "aliases": [],
+        "help": "Usage: heroku local:start [PROCESSNAME] [flags]\n\nrun heroku app locally\n\nFlags:\n -e, --env ENV            location of env file (defaults to .env)\n -f, --procfile PROCFILE  use a different Procfile\n -p, --port PORT          port to listen on\n\nStart the application specified by a Procfile (defaults to ./Procfile)\n\nExamples:\n\n    heroku local\n    heroku local web\n    heroku local web=2\n    heroku local web=1,worker=2\n",
+        "helpLine": [
+          "local:start [PROCESSNAME]",
+          "run heroku app locally"
+        ]
+      },
+      {
+        "id": "local:run",
+        "_version": "12.1.1",
+        "description": "run a one-off command",
+        "plugin": {
+          "name": "@heroku-cli/plugin-local",
+          "version": "5.1.24"
+        },
+        "hidden": false,
+        "aliases": [],
+        "help": "Usage: heroku local:run [flags]\n\nrun a one-off command\n\nFlags:\n -e, --env ENV\n -p, --port PORT\n\nExample:\n\n    heroku local:run bin/migrate\n",
+        "helpLine": [
+          "local:run",
+          "run a one-off command"
+        ]
+      },
+      {
+        "id": "local:version",
+        "_version": "12.1.1",
+        "description": "display node-foreman version",
+        "plugin": {
+          "name": "@heroku-cli/plugin-local",
+          "version": "5.1.24"
+        },
+        "hidden": false,
+        "aliases": [],
+        "help": "Usage: heroku local:version\n\ndisplay node-foreman version\n\nDisplay node-foreman version\n",
+        "helpLine": [
+          "local:version",
+          "display node-foreman version"
+        ]
+      }
+    ],
+    "topics": [
+      {
+        "name": "local",
+        "description": "run heroku app locally"
+      }
+    ]
+  }
+}

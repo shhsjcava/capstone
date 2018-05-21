@@ -1,0 +1,206 @@
+
+div.left{
+
+    width:40%;
+    height: 100%;
+    background-size: 100% 100%;
+    background-image: url("grey.png");
+    background-color: green;
+    position: relative;
+    border: black;
+    float:left;
+    opacity: 0.9;
+    padding-top: 16px;
+    padding-left: 16px;
+}
+
+.lvl{
+  padding-left: 0px;
+  float:left;
+  width:35%;
+  margin-top: 12px;
+  padding-bottom: 0px;
+  height: 145px;
+  color: black;
+   font-family: Verdana, Tahoma, Arial, Helvetica, sans-serif;
+}
+
+.sc{
+  height: 25px;
+  background-color: black;
+  width:250px;
+}
+
+.run{
+  width: 30%;
+  margin-left: 2%;
+  float: right;
+  margin-right: 18%;
+  background-color: #006400;
+  /*clear:left;*/
+}
+
+
+.score{
+  padding-right: 0px;
+  margin-top: 12px;
+  float:left;
+  margin-left: 16px;
+  width:35%;
+  padding-bottom: 0px;
+  height: 145px;
+  color: black;
+   font-family: Verdana, Tahoma, Arial, Helvetica, sans-serif;
+}
+
+.avatar{
+  width: 130px;
+  height: 145px;
+  margin-left: 20px;
+  float:left;
+  clear:right;
+  margin-top: 16px;
+}
+
+
+.nav{
+  width:25%;
+   float: right;
+   background-color: black;
+   color: white;
+   font-size: 18px;
+   margin-left: 0px;
+}
+
+.nav: hover {
+  color: orange;
+}
+
+.reset {
+  width: 30%;
+  margin-left: 15%;
+  float: right;
+/*  margin-right: 12%;*/
+  background-color: red;
+  color: white;
+}
+
+div.right{
+
+    width:60%;
+    height: 100%;
+    background-size: 100% 100%;
+    background-color:orange;
+    opacity: 0.9;
+    position:absolute;
+    border: black;
+    float:right;
+    margin-left: 40%;
+    padding-top: 16px;
+    padding-left: 16px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    position: center;
+    border: none;
+    cursor: pointer;
+    width: 75%;
+    margin-left: 12%;
+    clear: left;
+}
+
+div.box{
+    background-image:url("SCENE 1.jpg");
+    width:100%;
+    height: 100%;
+    float:right;
+    position: absolute;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+textarea{
+    width: 100%;
+   border:none;
+    box-sizing: border-box;
+    font-size:12pt;
+    height:65px;
+   overflow:auto;
+    font-family: Verdana, Tahoma, Arial, Helvetica, sans-serif;
+    resize: none;
+    background: none;
+    font: white;
+    color: white;
+    padding-bottom: 0px;
+}
+
+.code{
+  background-color: white;
+  color: black;
+  opacity: 1;
+  width: 85%;
+  margin-left: 6%;
+  margin-right: 10%;
+  margin-top: 38px;
+  height: 250px;
+}
+
+
+div.imgcontainer{
+    background-color: white;
+    width:90%;
+    height:130px;
+    padding-bottom: 16px;
+    margin-top: 16px;
+    margin-left: 16px;
+}
+
+.green{
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+
+/* Add a hover effect for buttons */
+.green:hover {
+    opacity: 0.5;
+}
+
+img {
+
+    width:100%;
+    height:100%;
+    size: contain;
+}
+
+
+form{
+    padding: 16px;
+    color: orange;
+    font-size: 18px;
+}
+
+
+p{
+    padding: 5px;
+    color:white;
+    font-family: sans-serif;
+    text-align: justify;
+    line-height: 1.3;
+    word-spacing: -2px
+}
+
+.pp{
+    text-align: center;
+    word-spacing: 0px;
+    color: orange;
+    font-size: 12px;
+}

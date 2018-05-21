@@ -1,0 +1,111 @@
+{
+  "invalidate": "6.99.0-ec9edad/3.6.0",
+  "manifest": {
+    "commands": [
+      {
+        "id": "console",
+        "_version": "12.1.1",
+        "plugin": {
+          "name": "@heroku-cli/plugin-run",
+          "version": "3.6.0"
+        },
+        "hidden": true,
+        "aliases": [],
+        "help": "Usage: heroku console [flags]\n\nFlags:\n -a, --app APP        app to run command against\n -e, --env ENV        environment variables to set (use ';' to split multiple\n                      vars)\n -r, --remote REMOTE  git remote of app to use\n -s, --size SIZE      dyno size\n",
+        "helpLine": [
+          "console",
+          null
+        ]
+      },
+      {
+        "id": "run:detached",
+        "_version": "12.1.1",
+        "description": "run a detached dyno, where output is sent to your logs",
+        "plugin": {
+          "name": "@heroku-cli/plugin-run",
+          "version": "3.6.0"
+        },
+        "hidden": false,
+        "aliases": [],
+        "help": "Usage: heroku run:detached [flags]\n\nrun a detached dyno, where output is sent to your logs\n\nFlags:\n -a, --app APP        app to run command against\n -e, --env ENV        environment variables to set (use ';' to split multiple\n                      vars)\n -r, --remote REMOTE  git remote of app to use\n -s, --size SIZE      dyno size\n -t, --tail           stream logs from the dyno\n --type TYPE          process type\n\nExample:\n\n    $ heroku run:detached ls\n    Running ls on app [detached]... up, run.1\n    Run heroku logs -a app -p run.1 to view the output.\n",
+        "helpLine": [
+          "run:detached",
+          "run a detached dyno, where output is sent to your logs"
+        ]
+      },
+      {
+        "id": "run:inside",
+        "_version": "12.1.1",
+        "description": "run a one-off process inside an existing heroku dyno",
+        "plugin": {
+          "name": "@heroku-cli/plugin-run",
+          "version": "3.6.0"
+        },
+        "hidden": true,
+        "aliases": [],
+        "help": "Usage: heroku run:inside [flags]\n\nrun a one-off process inside an existing heroku dyno\n\nFlags:\n -a, --app APP        app to run command against\n -r, --remote REMOTE  git remote of app to use\n --env ENV            environment variables to set (use ';' to split multiple\n                      vars)\n --exit-code          passthrough the exit code of the remote command\n\nExamples:\n\n  $ heroku run:inside web.1 bash\n  Running bash on web.1.... up\n  ~ $\n",
+        "helpLine": [
+          "run:inside",
+          "run a one-off process inside an existing heroku dyno"
+        ]
+      },
+      {
+        "id": "logs",
+        "_version": "12.1.1",
+        "description": "display recent log output",
+        "plugin": {
+          "name": "@heroku-cli/plugin-run",
+          "version": "3.6.0"
+        },
+        "hidden": false,
+        "aliases": [],
+        "help": "Usage: heroku logs [flags]\n\ndisplay recent log output\n\nFlags:\n -a, --app APP        app to run command against\n -d, --dyno DYNO      dyno to limit filter by\n -n, --num NUM        number of lines to display\n -r, --remote REMOTE  git remote of app to use\n -s, --source SOURCE  log source to limit filter by\n -t, --tail           continually stream logs\n --force-colors       force use of colors (even on non-tty output)\n\nExample:\n\n    $ heroku logs\n    2012-01-01T12:00:00+00:00 heroku[api]: Config add EXAMPLE by email@example.com\n    2012-01-01T12:00:01+00:00 heroku[api]: Release v1 created by email@example.com\n",
+        "helpLine": [
+          "logs",
+          "display recent log output"
+        ]
+      },
+      {
+        "id": "rake",
+        "_version": "12.1.1",
+        "plugin": {
+          "name": "@heroku-cli/plugin-run",
+          "version": "3.6.0"
+        },
+        "hidden": true,
+        "aliases": [],
+        "help": "Usage: heroku rake [flags]\n\nFlags:\n -a, --app APP        app to run command against\n -e, --env ENV        environment variables to set (use ';' to split multiple\n                      vars)\n -r, --remote REMOTE  git remote of app to use\n -s, --size SIZE      dyno size\n -x, --exit-code      passthrough the exit code of the remote command\n --no-tty             force the command to not run in a tty\n",
+        "helpLine": [
+          "rake",
+          null
+        ]
+      },
+      {
+        "id": "run",
+        "_version": "12.1.1",
+        "description": "run a one-off process inside a heroku dyno",
+        "plugin": {
+          "name": "@heroku-cli/plugin-run",
+          "version": "3.6.0"
+        },
+        "hidden": false,
+        "aliases": [],
+        "help": "Usage: heroku run [flags]\n\nrun a one-off process inside a heroku dyno\n\nFlags:\n -a, --app APP        app to run command against\n -e, --env ENV        environment variables to set (use ';' to split multiple\n                      vars)\n -r, --remote REMOTE  git remote of app to use\n -s, --size SIZE      dyno size\n -x, --exit-code      passthrough the exit code of the remote command\n --no-notify          disables notification when dyno is up (alternatively use\n                      HEROKU_NOTIFICATIONS=0)\n --no-tty             force the command to not run in a tty\n --type TYPE          process type\n\nShows a notification if the dyno takes more than 20 seconds to start.\n\nExamples:\n\n    $ heroku run bash\n    Running bash on app.... up, run.1\n    ~ $\n\n    $ heroku run -s hobby -- myscript.sh -a arg1 -s arg2\n    Running myscript.sh -a arg1 -s arg2 on app.... up, run.1\n",
+        "helpLine": [
+          "run",
+          "run a one-off process inside a heroku dyno"
+        ]
+      }
+    ],
+    "topics": [
+      {
+        "name": "run",
+        "description": "run a one-off process inside a Heroku dyno"
+      },
+      {
+        "name": "logs",
+        "description": "display recent log output"
+      }
+    ]
+  }
+}

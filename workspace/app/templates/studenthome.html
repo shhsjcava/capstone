@@ -1,0 +1,86 @@
+
+{% extends 'base.html' %}
+
+{% block head %}
+{{ super() }}
+  <title>GO PELI | HOME</title>
+  <script src="lib/main.js"></script>
+ {% block css %}
+<link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/shome.css') }}">
+    
+<style>#btn{background-color:#00a0b1;color:#fff;width:150px;height:30px;font-family:segoe ui light;text-align:center;padding-top:10px;-webkit-transition:-webkit-transform .5s, background .5s;}#btn:hover{background-color:#fff;color:#00a0b1;border:1px solid #00a0b1;}a{text-decoration:none;}</style>
+
+{% endblock %}
+
+{% endblock %}
+
+
+{% block main %}
+<br>
+<br>
+<br>
+
+<div class="contentWrapper">
+<div id="contentLeft">
+
+
+
+<div id ='sidePanel'>
+    <ul id="leftNavigation">
+    {% for key in courselist %}
+        {% for value in courselist[key] %}
+      <li class="active"> <id="{{key[0]}}>"<a href=#> <i class="fa fa-coffee leftNavIcon"></i>  {{ key[0] }} </a>
+          <ul>
+           {% for n in value %}
+          <li> <a class="test" href='{{ url_for("levels", cour =key[0] ,toc =n[0] )}}' data-tid="{{n[0] }}"> {{ n[0] }}</a> </li>
+            {% endfor %}
+        </ul>
+
+      </li>
+        {% endfor %}
+{% endfor %}
+
+    </ul>
+</div>
+</div>
+
+<div id="contentRight">
+ 
+  <p id=result>Choose a Topic n Course!</p>
+  
+<!--<div class=box>-->
+<!--<form method="post" action="/shome">-->
+
+<!--            <li class="nav-item">-->
+<!--                <a class="nav-link" href="{{ url_for('logout') }}">Logout</a>-->
+<!--            </li>-->
+
+<!--       <input class="level" type="submit" value="1"/>-->
+<!--		<input  class="level" type="submit" value="2"/>-->
+<!--		<input class="level" type="submit" value="3"/>-->
+<!--		<input class="level" type="submit" value="4"/>-->
+<!--		<input class="level" type="submit" value="5"/>-->
+<!--		<input class="level" type="submit" value="6"/>-->
+
+
+<!--</form>-->
+<!--<button type="submit" ></button>-->
+<!--	</div>-->
+
+  </div>
+</div><script src="js/object/VerticalNavigation.min.js"></script>
+
+<script type="text/javascript">
+$(function() {
+
+    var verticalNavigation = new SSDSystem.VerticalNavigation();
+    verticalNavigation.init();
+
+});
+</script>
+
+
+<br>
+
+{% endblock %}

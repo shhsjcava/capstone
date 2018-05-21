@@ -1,0 +1,250 @@
+
+/* Dropdown Button */
+.dropbtn {
+    background-color: #4CAF50;
+    color: white;
+    font-size: 16px;
+    border: none;
+}
+
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+    width:100%;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    /*min-width: 160px;*/
+    width:40%;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-color:lightblue;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: lightblue;}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display:block;
+   /* margin-left: 16px;*/
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+}
+
+div.left{
+
+    width:40%;
+    height: 100%;
+    background-size: 100% 100%;
+    background-image: url("grey.png");
+    background-color: green;
+    position: relative;
+    border: black;
+    float:left;
+    opacity: 0.9;
+    padding-top: 16px;
+    padding-left: 16px;
+}
+
+.nav{
+  width:25%;
+   float: right;
+   background-color: black;
+   color: white;
+   font-size: 18px;
+   margin-left: 0px;
+}
+
+.space{
+  width:60%;
+   float: right;
+   background-color: black;
+   color: white;
+   font-size: 18px;
+   margin-left: 0px;
+    padding-left: 32%;
+   padding-right: 76px;
+}
+
+.nav: hover {
+  color: orange;
+}
+
+.add {
+  width: 20%;
+  margin-left: 11%;
+  float:right;
+  background-color: #006400;
+  margin-right: 9%;
+}
+
+.add1 {
+  width: 20%;
+  margin-left: 11%;
+  float:right;
+  background-color: #006400;
+  margin-right: 9%;
+  clear:left;
+}
+
+
+div.right{
+
+    width:60%;
+    height: 100%;
+    background-size: 100% 100%;
+    background-color:orange;
+    opacity: 0.9;
+    position:absolute;
+    border: black;
+    float:right;
+    margin-left: 40%;
+    padding-top: 16px;
+    padding-left: 16px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    position: center;
+    border: none;
+    cursor: pointer;
+    width: 75%;
+    margin-left: 12%;
+    clear: left;
+}
+
+div.box{
+    background-image:url("SCENE 1.jpg");
+    width:100%;
+    height: 100%;
+    float:right;
+    position: absolute;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.nxt{
+  width: 30%;
+  margin-left: 2%;
+  float: right;
+  margin-right: 20%;
+  background-color: #006400;
+}
+
+.prv {
+  width: 30%;
+  margin-left: 2%;
+  float: right;
+  background-color: #006400;
+  color: white;
+}
+
+textarea{
+    width: 85%;
+    border:none;
+    box-sizing: border-box;
+    font-size:12pt;
+    height:30px;
+    overflow:auto;
+    font-family: Verdana, Tahoma, Arial, Helvetica, sans-serif;
+    resize: none;
+    background: none;
+    font: white;
+    color: black;
+    padding-bottom: 0px;
+    background-color: white;
+    margin-left: 6%;
+    margin-right: 10%;
+    margin-top: 10px;
+    border:none;
+}
+
+
+.code{
+  background-color: white;
+  color: black;
+  opacity: 1;
+  height: 125px;
+}
+
+
+div.imgcontainer{
+    background-color: white;
+    width:90%;
+    height:130px;
+    padding-bottom: 16px;
+    margin-top: 16px;
+    margin-left: 16px;
+}
+
+.green{
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+
+/* Add a hover effect for buttons */
+.green:hover {
+    opacity: 0.5;
+}
+
+img {
+
+    width:100%;
+    height:100%;
+    size: contain;
+}
+
+
+form{
+    padding: 16px;
+    color: black;
+    font-size: 20px;
+}
+
+
+p{
+    padding: 5px;
+    color:white;
+    font-family: sans-serif;
+    text-align: justify;
+    line-height: 1.3;
+    word-spacing: -2px
+    width: 75%;
+    margin-right: 5%;
+    margin-left: 2%;
+}
+
+.pp{
+    text-align: center;
+    word-spacing: 0px;
+    color: orange;
+    font-size: 15px;
+   width: 75%;
+    margin-left: 12%;
+}

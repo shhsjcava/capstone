@@ -1,0 +1,111 @@
+{
+  "invalidate": "6.99.0-ec9edad/4.4.13",
+  "manifest": {
+    "commands": [
+      {
+        "id": "container:rm",
+        "_version": "12.1.1",
+        "description": "remove the process type from your app",
+        "plugin": {
+          "name": "@heroku-cli/plugin-container-registry",
+          "version": "4.4.13"
+        },
+        "hidden": false,
+        "aliases": [],
+        "help": "Usage: heroku container:rm [flags]\n\nremove the process type from your app\n\nFlags:\n -a, --app APP        app to run command against\n -r, --remote REMOTE  git remote of app to use\n\nUsage:\n    heroku container:rm web        # Destroys the web container\n    heroku container:rm web worker # Destroys the web and worker containers\n",
+        "helpLine": [
+          "container:rm",
+          "remove the process type from your app"
+        ]
+      },
+      {
+        "id": "container",
+        "_version": "12.1.1",
+        "description": "Use containers to build and deploy Heroku apps",
+        "plugin": {
+          "name": "@heroku-cli/plugin-container-registry",
+          "version": "4.4.13"
+        },
+        "hidden": false,
+        "aliases": [],
+        "help": "Usage: heroku container\n\nUse containers to build and deploy Heroku apps\n",
+        "helpLine": [
+          "container",
+          "Use containers to build and deploy Heroku apps"
+        ]
+      },
+      {
+        "id": "container:login",
+        "_version": "12.1.1",
+        "description": "log in to Heroku Container Registry",
+        "plugin": {
+          "name": "@heroku-cli/plugin-container-registry",
+          "version": "4.4.13"
+        },
+        "hidden": false,
+        "aliases": [],
+        "help": "Usage: heroku container:login [flags]\n\nlog in to Heroku Container Registry\n\nFlags:\n -v, --verbose\n\nUsage:\n        heroku container:login\n",
+        "helpLine": [
+          "container:login",
+          "log in to Heroku Container Registry"
+        ]
+      },
+      {
+        "id": "container:logout",
+        "_version": "12.1.1",
+        "description": "log out from Heroku Container Registry",
+        "plugin": {
+          "name": "@heroku-cli/plugin-container-registry",
+          "version": "4.4.13"
+        },
+        "hidden": false,
+        "aliases": [],
+        "help": "Usage: heroku container:logout [flags]\n\nlog out from Heroku Container Registry\n\nFlags:\n -v, --verbose\n",
+        "helpLine": [
+          "container:logout",
+          "log out from Heroku Container Registry"
+        ]
+      },
+      {
+        "id": "container:push",
+        "_version": "12.1.1",
+        "description": "builds, then pushes Docker images to deploy your Heroku app",
+        "plugin": {
+          "name": "@heroku-cli/plugin-container-registry",
+          "version": "4.4.13"
+        },
+        "hidden": false,
+        "aliases": [],
+        "help": "Usage: heroku container:push [flags]\n\nbuilds, then pushes Docker images to deploy your Heroku app\n\nFlags:\n -R, --recursive      pushes Dockerfile.<process> found in current and\n                      subdirectories\n -a, --app APP        app to run command against\n -r, --remote REMOTE  git remote of app to use\n -v, --verbose\n --arg ARG            set build-time variables\n\nUsage:\n    heroku container:push web                          # Pushes Dockerfile to web process type\n    heroku container:push worker                       # Pushes Dockerfile to worker process type\n    heroku container:push web worker --recursive       # Pushes Dockerfile.web and Dockerfile.worker\n    heroku container:push --recursive                  # Pushes Dockerfile.*\n    heroku container:push web --arg ENV=live,HTTPS=on  # Build-time variables\n",
+        "helpLine": [
+          "container:push",
+          "builds, then pushes Docker images to deploy your Heroku app"
+        ]
+      },
+      {
+        "id": "container:run",
+        "_version": "12.1.1",
+        "description": "builds, then runs the docker image locally",
+        "plugin": {
+          "name": "@heroku-cli/plugin-container-registry",
+          "version": "4.4.13"
+        },
+        "hidden": false,
+        "aliases": [],
+        "help": "Usage: heroku container:run [flags]\n\nbuilds, then runs the docker image locally\n\nFlags:\n -a, --app APP        app to run command against\n -p, --port PORT      port the app will run on\n -r, --remote REMOTE  git remote of app to use\n -v, --verbose\n\nUsage:\n    heroku container:run web bash # Runs bash on the local web docker container\n    heroku container:run worker   # Runs the container CMD on the local worker container\n",
+        "helpLine": [
+          "container:run",
+          "builds, then runs the docker image locally"
+        ]
+      }
+    ],
+    "topics": [
+      {
+        "topic": "container",
+        "description": "Use containers to build and deploy Heroku apps",
+        "name": "container",
+        "help": "Use containers to build and deploy Heroku apps"
+      }
+    ]
+  }
+}

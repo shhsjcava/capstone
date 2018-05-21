@@ -1,0 +1,96 @@
+{% extends 'base.html' %}
+{% block head %}
+{{ super() }}
+<script src="{{ url_for('static', filename='jquery.min.js') }}"></script>
+<title>GO PELI | TASK</title>
+<link rel="stylesheet" type="text/css" href="static/css/task.css">
+<script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+
+<script src="dist/set-number.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script type=text/javascript>
+  $SCRIPT_ROOT = {{ request.script_root|tojson|safe }};
+  $(document).ready(function(){
+      $('#run').bind('click', function() {
+        $.getJSON($SCRIPT_ROOT + "/_test",{
+          code: JSON.stringify($('.code').val()),
+        }, function(data) {
+          alert(data)
+          $('#result').val(data.result);
+        });
+        return false;
+      });2222
+            });
+        </script>
+{% endblock %}
+
+{% block main %}
+
+  <body>
+  <div class= "box">
+
+    <div class="right">
+      <div>
+        <img class="avatar" src="avatar.png">
+      </div>
+      <div>
+          <div class="score">
+            <label><b>BEST SCORE</b></label><br>
+            {{ bestscore }}
+            <br><br>
+            <label><b>BEST TIME</b></label><br>
+            {{ besttime }}
+            <br><br>
+          </div>
+          <div class="lvl">
+            <label><b>LEVEL</b></label><br>
+            {{ level }}
+            <br><br>
+            <label><b>MARKS</b></label><br>
+            {{ marks }}
+
+            <br><br>
+          </div>
+      </div>
+      <div style="width:100%; height: 6%; background-color: black; opacity: 0.9; margin-top: 170px;">
+      </div>
+      <form class="lbl" method="post" >
+          <div class="container">
+            <textarea class="code" type="text" placeholder="Write your code here" name="code" required></textarea><br>
+            <br>
+
+            <label><b>Results</b></label><br>
+            <div id ='results'>{{ results }}
+            <!--  <textarea class="results" type="text" placeholder="reh" name="results" ></textarea>
+              <br><br> -->
+              </div>
+            <br>
+
+             <button class="run" type="submit" id="run">Run</button>
+        <button class="reset" type="submit" onclick="document.getElementById('code').value = ''" >Reset</button>
+
+        </div>
+        </form>
+
+    </div>
+
+    <div class ="left">
+      <div class="imgcontainer">
+      <img src="static/images/clogo.png.png">
+      </div>
+      <p> INSTRUCTIONS </p>
+
+          <div class="container">
+            <label style="color:orange; font-size:18px; font-family: sans-serif;">Task <p style="color:white; font-size: 18px;"> {{ taskinfo.question }} </p></label><br><br><br><br>
+
+            <label  style="color:orange; font-size:18px; font-family: sans-serif; padding-bottom: 0px;">Hints <p style="color:white; font-size: 18px;"> {{ taskinfo.hint }}</p></label>    
+          </div><br><br><br><br>
+       <div>
+        <button class="submit" type="submit" id="submit" action="{{url_for('testcase')}}" >Submit</button><br><br>
+        <button type="submit">Next</button>
+      </div>
+  </div>
+
+  </div>
+  </body>
+{% endblock %}

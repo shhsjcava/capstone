@@ -1,0 +1,221 @@
+{
+  "invalidate": "6.99.0-ec9edad/1.9.10",
+  "manifest": {
+    "commands": [
+      {
+        "id": "ci:config:get",
+        "_version": "12.1.1",
+        "description": "get a CI config var",
+        "plugin": {
+          "name": "@heroku-cli/plugin-ci",
+          "version": "1.9.10"
+        },
+        "hidden": false,
+        "aliases": [],
+        "help": "Usage: heroku ci:config:get KEY [flags]\n\nget a CI config var\n\nFlags:\n -a, --app APP            app to run command against\n -p, --pipeline PIPELINE  pipeline\n -r, --remote REMOTE      git remote of app to use\n -s, --shell              output config var in shell format\n\nExamples:\n\n    $ heroku ci:config:get RAILS_ENV\n    test\n",
+        "helpLine": [
+          "ci:config:get KEY",
+          "get a CI config var"
+        ]
+      },
+      {
+        "id": "ci:config",
+        "_version": "12.1.1",
+        "description": "display CI config vars",
+        "plugin": {
+          "name": "@heroku-cli/plugin-ci",
+          "version": "1.9.10"
+        },
+        "hidden": false,
+        "aliases": [],
+        "help": "Usage: heroku ci:config [flags]\n\ndisplay CI config vars\n\nFlags:\n -a, --app APP            app to run command against\n -p, --pipeline PIPELINE  pipeline\n -r, --remote REMOTE      git remote of app to use\n -s, --shell              output config vars in shell format\n --json                   output config vars in json format\n\nExample:\n\n    $ heroku ci:config --app murmuring-headland-14719 --json\n",
+        "helpLine": [
+          "ci:config",
+          "display CI config vars"
+        ]
+      },
+      {
+        "id": "ci:config:set",
+        "_version": "12.1.1",
+        "description": "set CI config vars",
+        "plugin": {
+          "name": "@heroku-cli/plugin-ci",
+          "version": "1.9.10"
+        },
+        "hidden": false,
+        "aliases": [],
+        "help": "Usage: heroku ci:config:set [flags]\n\nset CI config vars\n\nFlags:\n -a, --app APP            app to run command against\n -p, --pipeline PIPELINE  pipeline\n -r, --remote REMOTE      git remote of app to use\n\nExamples:\n\n    $ heroku ci:config:set RAILS_ENV=test\n    Setting test config vars... done\n\n    RAILS_ENV: test\n",
+        "helpLine": [
+          "ci:config:set",
+          "set CI config vars"
+        ]
+      },
+      {
+        "id": "ci:config:unset",
+        "_version": "12.1.1",
+        "description": "unset CI config vars",
+        "plugin": {
+          "name": "@heroku-cli/plugin-ci",
+          "version": "1.9.10"
+        },
+        "hidden": false,
+        "aliases": [],
+        "help": "Usage: heroku ci:config:unset [flags]\n\nunset CI config vars\n\nFlags:\n -a, --app APP            app to run command against\n -p, --pipeline PIPELINE  pipeline\n -r, --remote REMOTE      git remote of app to use\n\nExamples:\n\n    $ heroku ci:config:uset RAILS_ENV\n    Unsetting RAILS_ENV... done\n",
+        "helpLine": [
+          "ci:config:unset",
+          "unset CI config vars"
+        ]
+      },
+      {
+        "id": "ci:debug",
+        "_version": "12.1.1",
+        "description": "opens an interactive test debugging session with the contents of the current directory",
+        "plugin": {
+          "name": "@heroku-cli/plugin-ci",
+          "version": "1.9.10"
+        },
+        "hidden": false,
+        "aliases": [],
+        "help": "Usage: heroku ci:debug [flags]\n\nopens an interactive test debugging session with the contents of the current directory\n\nFlags:\n -a, --app APP            app to run command against\n -p, --pipeline PIPELINE  pipeline\n -r, --remote REMOTE      git remote of app to use\n --no-cache               start test run with an empty cache\n --no-setup               start test dyno without running test-setup\n\nExample:\n\n    $ heroku ci:debug\n    Preparing source... done\n    Creating test run... done\n    Running setup and attaching to test dyno...\n\n~ $\n",
+        "helpLine": [
+          "ci:debug",
+          "opens an interactive test debugging session with the contents of the current directory"
+        ]
+      },
+      {
+        "id": "ci",
+        "_version": "12.1.1",
+        "description": "show the most recent runs",
+        "plugin": {
+          "name": "@heroku-cli/plugin-ci",
+          "version": "1.9.10"
+        },
+        "hidden": false,
+        "aliases": [],
+        "help": "Usage: heroku ci [flags]\n\nshow the most recent runs\n\nFlags:\n -a, --app APP            app to run command against\n -j, --json               output run info in json format\n -p, --pipeline PIPELINE  pipeline\n -r, --remote REMOTE      git remote of app to use\n -w, --watch              keep running and watch for new and update tests\n\ndisplay the most recent CI runs for the given pipeline\n\n  Example:\n\n    $ heroku ci --app murmuring-headland-14719\n",
+        "helpLine": [
+          "ci",
+          "show the most recent runs"
+        ]
+      },
+      {
+        "id": "ci:list",
+        "_version": "12.1.1",
+        "description": "show the most recent runs",
+        "plugin": {
+          "name": "@heroku-cli/plugin-ci",
+          "version": "1.9.10"
+        },
+        "hidden": true,
+        "aliases": [],
+        "help": "Usage: heroku ci:list [flags]\n\nshow the most recent runs\n\nFlags:\n -a, --app APP            app to run command against\n -j, --json               output run info in json format\n -p, --pipeline PIPELINE  pipeline\n -r, --remote REMOTE      git remote of app to use\n -w, --watch              keep running and watch for new and update tests\n\ndisplay the most recent CI runs for the given pipeline\n\n  Example:\n\n    $ heroku ci --app murmuring-headland-14719\n",
+        "helpLine": [
+          "ci:list",
+          "show the most recent runs"
+        ]
+      },
+      {
+        "id": "ci:info",
+        "_version": "12.1.1",
+        "description": "test run information",
+        "plugin": {
+          "name": "@heroku-cli/plugin-ci",
+          "version": "1.9.10"
+        },
+        "hidden": false,
+        "aliases": [],
+        "help": "Usage: heroku ci:info NUMBER [flags]\n\ntest run information\n\nNUMBER  the test run number to show\n\nFlags:\n -a, --app APP            app to run command against\n -p, --pipeline PIPELINE  pipeline\n -r, --remote REMOTE      git remote of app to use\n\nshow the status of a specific test run\n\n  Example:\n\n    $ heroku ci:info 1288 --app murmuring-headland-14719\n",
+        "helpLine": [
+          "ci:info NUMBER",
+          "test run information"
+        ]
+      },
+      {
+        "id": "ci:last",
+        "_version": "12.1.1",
+        "description": "get the results of the last run",
+        "plugin": {
+          "name": "@heroku-cli/plugin-ci",
+          "version": "1.9.10"
+        },
+        "hidden": false,
+        "aliases": [],
+        "help": "Usage: heroku ci:last [flags]\n\nget the results of the last run\n\nFlags:\n -a, --app APP            app to run command against\n -p, --pipeline PIPELINE  pipeline\n -r, --remote REMOTE      git remote of app to use\n\nlooks for the most recent run and returns the output of that run\n\n  Example:\n\n  $ heroku ci:last --app murmuring-headland-14719\n",
+        "helpLine": [
+          "ci:last",
+          "get the results of the last run"
+        ]
+      },
+      {
+        "id": "ci:migrate-manifest",
+        "_version": "12.1.1",
+        "description": "app-ci.json is deprecated. Run this command to migrate to app.json with an environments key.",
+        "plugin": {
+          "name": "@heroku-cli/plugin-ci",
+          "version": "1.9.10"
+        },
+        "hidden": false,
+        "aliases": [],
+        "help": "Usage: heroku ci:migrate-manifest\n\napp-ci.json is deprecated. Run this command to migrate to app.json with an environments key.\n\nExample:\n\n    $ heroku ci:migrate-manifest\n    Writing app.json file... done\n    Deleting app-ci.json file... done\n    Please check the contents of your app.json before committing to your repo\n    You're all set! 🎉.\n",
+        "helpLine": [
+          "ci:migrate-manifest",
+          "app-ci.json is deprecated. Run this command to migrate to app.json with an environments key."
+        ]
+      },
+      {
+        "id": "ci:open",
+        "_version": "12.1.1",
+        "description": "open the Dashboard version of Heroku CI",
+        "plugin": {
+          "name": "@heroku-cli/plugin-ci",
+          "version": "1.9.10"
+        },
+        "hidden": false,
+        "aliases": [],
+        "help": "Usage: heroku ci:open [flags]\n\nopen the Dashboard version of Heroku CI\n\nFlags:\n -a, --app APP            app to run command against\n -p, --pipeline PIPELINE  pipeline\n -r, --remote REMOTE      git remote of app to use\n\nopens a browser to view the Dashboard version of Heroku CI\n\n    Example:\n\n    $ heroku ci:open --app murmuring-headland-14719\n",
+        "helpLine": [
+          "ci:open",
+          "open the Dashboard version of Heroku CI"
+        ]
+      },
+      {
+        "id": "ci:rerun",
+        "_version": "12.1.1",
+        "description": "rerun tests against current directory",
+        "plugin": {
+          "name": "@heroku-cli/plugin-ci",
+          "version": "1.9.10"
+        },
+        "hidden": false,
+        "aliases": [],
+        "help": "Usage: heroku ci:rerun [NUMBER] [flags]\n\nrerun tests against current directory\n\nFlags:\n -a, --app APP            app to run command against\n -p, --pipeline PIPELINE  pipeline\n -r, --remote REMOTE      git remote of app to use\n\nuploads the contents of the current directory, using git archive, to Heroku and runs the tests\n\n  Example:\n\n    $ heroku ci:rerun 985 --app murmuring-headland-14719\n",
+        "helpLine": [
+          "ci:rerun [NUMBER]",
+          "rerun tests against current directory"
+        ]
+      },
+      {
+        "id": "ci:run",
+        "_version": "12.1.1",
+        "description": "run tests against current directory",
+        "plugin": {
+          "name": "@heroku-cli/plugin-ci",
+          "version": "1.9.10"
+        },
+        "hidden": false,
+        "aliases": [],
+        "help": "Usage: heroku ci:run [flags]\n\nrun tests against current directory\n\nFlags:\n -a, --app APP            app to run command against\n -p, --pipeline PIPELINE  pipeline\n -r, --remote REMOTE      git remote of app to use\n\nuploads the contents of the current directory to Heroku and runs the tests\n\n  Example:\n\n    $ heroku ci:run --app murmuring-headland-14719\n",
+        "helpLine": [
+          "ci:run",
+          "run tests against current directory"
+        ]
+      }
+    ],
+    "topics": [
+      {
+        "name": "ci",
+        "description": "run an application test suite on Heroku"
+      }
+    ]
+  }
+}

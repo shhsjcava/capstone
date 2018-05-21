@@ -1,0 +1,22 @@
+{
+  "invalidate": "6.99.0-ec9edad/1.0.1",
+  "manifest": {
+    "commands": [
+      {
+        "id": "regions",
+        "description": "list available regions for deployment",
+        "plugin": {
+          "name": "@heroku-cli/plugin-ps",
+          "version": "1.0.1"
+        },
+        "aliases": [],
+        "help": "Usage: heroku regions [flags]\n\nlist available regions for deployment\n\nFlags:\n --common   show regions for common runtime\n --json     output in json format\n --private  show regions for private spaces\n",
+        "helpLine": [
+          "regions",
+          "list available regions for deployment"
+        ]
+      }
+    ],
+    "topics": []
+  }
+}

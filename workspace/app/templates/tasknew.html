@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+{% block head %}
+{{ super() }}
+  <title>GO PELI | HOME</title>
+<body>
+{% endblock %}
+
+{% block main %}
+  <style>
+        button{
+            background-color:teal;
+            border-color:#333;
+              border-width: 8px;
+            border-radius: 8px;
+            padding: 40px;
+            transition-duration: 0.4s;
+            color: white;
+            font-size: 40px;
+            margin-right: 50%;
+            margin-left: 50%;
+            margin-top: 20%;
+            position: relative;
+
+        }
+
+        button:hover {
+            background-color: lightgreen;
+            color: #333;
+            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+            border-color:teal;
+            border-width: 8px;
+        }
+        .box{
+
+            background-image:url("SCENE 1.jpg");
+            width:100%;
+            height: 100%;
+            float:right;
+            position: absolute;
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+
+        }
+</style>
+<div class="box">
+<p>
+
+{{ num }} &nbsp &nbsp 
+{{ cour }} &nbsp &nbsp 
+{{ toc }}
+</p>
+{% for i in range(1,6) %}
+    {% if i in num %}
+    <button type="button"  onclick="href='{{url_for('gettask', qid =i, cour =cour, toc =toc, level=level)}} >{{i}}">{{i}} </button>
+    {% else %}
+    <button type="button" onclick="href='{{url_for('gettask', qid =i, cour =cour, toc =toc, level=level)}}>{{i}}">{{i}} </button>
+    {% endif %}
+{% endfor %}
+</div>
+{% endblock %}

@@ -1,0 +1,13 @@
+[user]
+    name = shhsjcava
+    email = i@gmail.c
+[core]
+    editor = nano
+    whitespace = off
+    excludesfile = ~/.gitignore
+[advice]
+    statusuoption = false
+[color]
+    ui = true
+[push]
+    default = current

@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+{% block head %}
+{{ super() }}
+<script src="{{ url_for('static', filename='jquery.min.js') }}"></script>
+<title>GO PELI | REPORT</title>
+body>
+  <style>
+
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 85%;
+}
+
+td, th {
+    border: none/* 1px solid #dddddd*/;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: lightblue;
+}
+
+tr:nth-child(odd) {
+    background-color: #333;
+    color:white;
+}
+
+label {
+
+  font-size: 20px;
+   /*margin-right: 100px;
+    margin-left: 100px;*/
+    text-align: left;
+    margin-top: 16px;
+
+}
+
+.box{
+    background-image:url("SCENE 1.jpg");
+    width:100%;
+    height: 100%;
+    float:right;
+    position: absolute;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+  }
+
+</style>
+<div class="box">
+<div style="margin-left: 15%; margin-top:16px;">
+<label><b>Topic: {{topic}} </b></label><br><br>
+
+<table>
+<tr>
+  <th>Completed</th> 
+  <th>In-Progress</th>
+  <th>No attempt</th>
+  <th>Pass (%)</th>
+  <th>Failure (%)</th>
+   <th>High Score</th>
+ </tr>
+<tr>
+  <td>{{compl}}</td> 
+  <td>{{iprog}}</td>
+  <td>{{noatt}}</td>
+  <td>{{pass}}</td>
+  <td>{{fail}}</td>
+   <td>{{highscore}}</td>
+ </tr>
+</table>
+</div>
+</div>
+</body>
+{% endblock %}

@@ -1,0 +1,55 @@
+{
+  "invalidate": "6.99.0-ec9edad/0.1.3",
+  "manifest": {
+    "commands": [
+      {
+        "id": "2fa",
+        "description": "check 2fa status",
+        "plugin": {
+          "name": "@heroku-cli/plugin-auth",
+          "version": "0.1.3"
+        },
+        "aliases": [
+          "2fa",
+          "twofactor"
+        ],
+        "help": "Usage: heroku 2fa\n\ncheck 2fa status\n\nAliases:\n  $ heroku 2fa\n  $ heroku twofactor\n",
+        "helpLine": [
+          "2fa",
+          "check 2fa status"
+        ]
+      },
+      {
+        "id": "auth:whoami",
+        "description": "display the current logged in user",
+        "plugin": {
+          "name": "@heroku-cli/plugin-auth",
+          "version": "0.1.3"
+        },
+        "aliases": [
+          "whoami"
+        ],
+        "help": "Usage: heroku auth:whoami\n\ndisplay the current logged in user\n\nAliases:\n  $ heroku whoami\n",
+        "helpLine": [
+          "auth:whoami",
+          "display the current logged in user"
+        ]
+      },
+      {
+        "id": "labs:disable",
+        "description": "disables an experimental feature",
+        "plugin": {
+          "name": "@heroku-cli/plugin-auth",
+          "version": "0.1.3"
+        },
+        "aliases": [],
+        "help": "Usage: heroku labs:disable [FEATURE] [flags]\n\ndisables an experimental feature\n\nFlags:\n -a, --app APP        app to run command against\n -r, --remote REMOTE  git remote of app to use\n --confirm CONFIRM\n",
+        "helpLine": [
+          "labs:disable [FEATURE]",
+          "disables an experimental feature"
+        ]
+      }
+    ],
+    "topics": []
+  }
+}

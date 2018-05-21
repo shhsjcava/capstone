@@ -1,0 +1,765 @@
+{
+  "invalidate": "6.99.0-ec9edad/2.9.9",
+  "manifest": {
+    "commands": [
+      {
+        "id": "pg:backups",
+        "_version": "12.1.1",
+        "description": "list database backups",
+        "plugin": {
+          "name": "@heroku-cli/plugin-pg",
+          "version": "2.9.9"
+        },
+        "hidden": false,
+        "aliases": [],
+        "help": "Usage: heroku pg:backups [flags]\n\nlist database backups\n\nFlags:\n -a, --app APP        app to run command against\n -r, --remote REMOTE  git remote of app to use\n",
+        "helpLine": [
+          "pg:backups",
+          "list database backups"
+        ]
+      },
+      {
+        "id": "pg:backups:cancel",
+        "_version": "12.1.1",
+        "description": "cancel an in-progress backup or restore (default newest)",
+        "plugin": {
+          "name": "@heroku-cli/plugin-pg",
+          "version": "2.9.9"
+        },
+        "hidden": false,
+        "aliases": [],
+        "help": "Usage: heroku pg:backups:cancel [BACKUP_ID] [flags]\n\ncancel an in-progress backup or restore (default newest)\n\nFlags:\n -a, --app APP        app to run command against\n -r, --remote REMOTE  git remote of app to use\n",
+        "helpLine": [
+          "pg:backups:cancel [BACKUP_ID]",
+          "cancel an in-progress backup or restore (default newest)"
+        ]
+      },
+      {
+        "id": "pg:backups:capture",
+        "_version": "12.1.1",
+        "description": "capture a new backup",
+        "plugin": {
+          "name": "@heroku-cli/plugin-pg",
+          "version": "2.9.9"
+        },
+        "hidden": false,
+        "aliases": [],
+        "help": "Usage: heroku pg:backups:capture [DATABASE] [flags]\n\ncapture a new backup\n\nFlags:\n -a, --app APP                  app to run command against\n -r, --remote REMOTE            git remote of app to use\n -v, --verbose\n --snapshot\n --wait-interval WAIT-INTERVAL\n",
+        "helpLine": [
+          "pg:backups:capture [DATABASE]",
+          "capture a new backup"
+        ]
+      },
+      {
+        "id": "pg:backups:delete",
+        "_version": "12.1.1",
+        "description": "delete a backup",
+        "plugin": {
+          "name": "@heroku-cli/plugin-pg",
+          "version": "2.9.9"
+        },
+        "hidden": false,
+        "aliases": [],
+        "help": "Usage: heroku pg:backups:delete BACKUP_ID [flags]\n\ndelete a backup\n\nFlags:\n -a, --app APP          app to run command against\n -c, --confirm CONFIRM\n -r, --remote REMOTE    git remote of app to use\n",
+        "helpLine": [
+          "pg:backups:delete BACKUP_ID",
+          "delete a backup"
+        ]
+      },
+      {
+        "id": "pg:backups:download",
+        "_version": "12.1.1",
+        "description": "downloads database backup",
+        "plugin": {
+          "name": "@heroku-cli/plugin-pg",
+          "version": "2.9.9"
+        },
+        "hidden": false,
+        "aliases": [],
+        "help": "Usage: heroku pg:backups:download [BACKUP_ID] [flags]\n\ndownloads database backup\n\nFlags:\n -a, --app APP        app to run command against\n -o, --output OUTPUT  location to download to. Defaults to latest.dump\n -r, --remote REMOTE  git remote of app to use\n",
+        "helpLine": [
+          "pg:backups:download [BACKUP_ID]",
+          "downloads database backup"
+        ]
+      },
+      {
+        "id": "pg:backups:info",
+        "_version": "12.1.1",
+        "description": "get information about a specific backup",
+        "plugin": {
+          "name": "@heroku-cli/plugin-pg",
+          "version": "2.9.9"
+        },
+        "hidden": false,
+        "aliases": [],
+        "help": "Usage: heroku pg:backups:info [BACKUP_ID] [flags]\n\nget information about a specific backup\n\nFlags:\n -a, --app APP        app to run command against\n -r, --remote REMOTE  git remote of app to use\n",
+        "helpLine": [
+          "pg:backups:info [BACKUP_ID]",
+          "get information about a specific backup"
+        ]
+      },
+      {
+        "id": "pg:backups:restore",
+        "_version": "12.1.1",
+        "description": "restore a backup (default latest) to a database",
+        "plugin": {
+          "name": "@heroku-cli/plugin-pg",
+          "version": "2.9.9"
+        },
+        "hidden": false,
+        "aliases": [],
+        "help": "Usage: heroku pg:backups:restore [BACKUP] [DATABASE] [flags]\n\nrestore a backup (default latest) to a database\n\nFlags:\n -a, --app APP                  app to run command against\n -c, --confirm CONFIRM\n -r, --remote REMOTE            git remote of app to use\n -v, --verbose\n --wait-interval WAIT-INTERVAL\n\ndefaults to saving the latest database to DATABASE_URL\n",
+        "helpLine": [
+          "pg:backups:restore [BACKUP] [DATABASE]",
+          "restore a backup (default latest) to a database"
+        ]
+      },
+      {
+        "id": "pg:backups:schedule",
+        "_version": "12.1.1",
+        "description": "schedule daily backups for given database",
+        "plugin": {
+          "name": "@heroku-cli/plugin-pg",
+          "version": "2.9.9"
+        },
+        "hidden": false,
+        "aliases": [],
+        "help": "Usage: heroku pg:backups:schedule [DATABASE] [flags]\n\nschedule daily backups for given database\n\nFlags:\n -a, --app APP        app to run command against\n -r, --remote REMOTE  git remote of app to use\n --at AT              at a specific (24h) hour in the given timezone. Defaults\n                      to UTC. --at '[HOUR]:00 [TIMEZONE]'\n",
+        "helpLine": [
+          "pg:backups:schedule [DATABASE]",
+          "schedule daily backups for given database"
+        ]
+      },
+      {
+        "id": "pg:backups:schedules",
+        "_version": "12.1.1",
+        "description": "list backup schedule",
+        "plugin": {
+          "name": "@heroku-cli/plugin-pg",
+          "version": "2.9.9"
+        },
+        "hidden": false,
+        "aliases": [],
+        "help": "Usage: heroku pg:backups:schedules [flags]\n\nlist backup schedule\n\nFlags:\n -a, --app APP        app to run command against\n -r, --remote REMOTE  git remote of app to use\n",
+        "helpLine": [
+          "pg:backups:schedules",
+          "list backup schedule"
+        ]
+      },
+      {
+        "id": "pg:backups:unschedule",
+        "_version": "12.1.1",
+        "description": "stop daily backups",
+        "plugin": {
+          "name": "@heroku-cli/plugin-pg",
+          "version": "2.9.9"
+        },
+        "hidden": false,
+        "aliases": [],
+        "help": "Usage: heroku pg:backups:unschedule [DATABASE] [flags]\n\nstop daily backups\n\nFlags:\n -a, --app APP        app to run command against\n -r, --remote REMOTE  git remote of app to use\n",
+        "helpLine": [
+          "pg:backups:unschedule [DATABASE]",
+          "stop daily backups"
+        ]
+      },
+      {
+        "id": "pg:backups:url",
+        "_version": "12.1.1",
+        "description": "get secret but publicly accessible URL of a backup",
+        "plugin": {
+          "name": "@heroku-cli/plugin-pg",
+          "version": "2.9.9"
+        },
+        "hidden": false,
+        "aliases": [],
+        "help": "Usage: heroku pg:backups:url [BACKUP_ID] [flags]\n\nget secret but publicly accessible URL of a backup\n\nFlags:\n -a, --app APP        app to run command against\n -r, --remote REMOTE  git remote of app to use\n",
+        "helpLine": [
+          "pg:backups:url [BACKUP_ID]",
+          "get secret but publicly accessible URL of a backup"
+        ]
+      },
+      {
+        "id": "pg:backups:public-url",
+        "_version": "12.1.1",
+        "description": "get secret but publicly accessible URL of a backup",
+        "plugin": {
+          "name": "@heroku-cli/plugin-pg",
+          "version": "2.9.9"
+        },
+        "hidden": true,
+        "aliases": [],
+        "help": "Usage: heroku pg:backups:public-url [BACKUP_ID] [flags]\n\nget secret but publicly accessible URL of a backup\n\nFlags:\n -a, --app APP        app to run command against\n -r, --remote REMOTE  git remote of app to use\n",
+        "helpLine": [
+          "pg:backups:public-url [BACKUP_ID]",
+          "get secret but publicly accessible URL of a backup"
+        ]
+      },
+      {
+        "id": "pg:backups:publicurl",
+        "_version": "12.1.1",
+        "description": "get secret but publicly accessible URL of a backup",
+        "plugin": {
+          "name": "@heroku-cli/plugin-pg",
+          "version": "2.9.9"
+        },
+        "hidden": true,
+        "aliases": [],
+        "help": "Usage: heroku pg:backups:publicurl [BACKUP_ID] [flags]\n\nget secret but publicly accessible URL of a backup\n\nFlags:\n -a, --app APP        app to run command against\n -r, --remote REMOTE  git remote of app to use\n",
+        "helpLine": [
+          "pg:backups:publicurl [BACKUP_ID]",
+          "get secret but publicly accessible URL of a backup"
+        ]
+      },
+      {
+        "id": "pg:copy",
+        "_version": "12.1.1",
+        "description": "copy all data from source db to target",
+        "plugin": {
+          "name": "@heroku-cli/plugin-pg",
+          "version": "2.9.9"
+        },
+        "hidden": false,
+        "aliases": [],
+        "help": "Usage: heroku pg:copy SOURCE TARGET [flags]\n\ncopy all data from source db to target\n\nFlags:\n -a, --app APP                  app to run command against\n -r, --remote REMOTE            git remote of app to use\n --confirm CONFIRM\n --verbose\n --wait-interval WAIT-INTERVAL\n\nat least one of the databases must be a Heroku PostgreSQL DB\n",
+        "helpLine": [
+          "pg:copy SOURCE TARGET",
+          "copy all data from source db to target"
+        ]
+      },
+      {
+        "id": "pg:credentials",
+        "_version": "12.1.1",
+        "description": "show information on credentials in the database",
+        "plugin": {
+          "name": "@heroku-cli/plugin-pg",
+          "version": "2.9.9"
+        },
+        "hidden": false,
+        "aliases": [],
+        "help": "Usage: heroku pg:credentials [DATABASE] [flags]\n\nshow information on credentials in the database\n\nFlags:\n -a, --app APP        app to run command against\n -r, --remote REMOTE  git remote of app to use\n --reset              DEPRECATED\n",
+        "helpLine": [
+          "pg:credentials [DATABASE]",
+          "show information on credentials in the database"
+        ]
+      },
+      {
+        "id": "pg:credentials:create",
+        "_version": "12.1.1",
+        "description": "create credential within database",
+        "plugin": {
+          "name": "@heroku-cli/plugin-pg",
+          "version": "2.9.9"
+        },
+        "hidden": false,
+        "aliases": [],
+        "help": "Usage: heroku pg:credentials:create [DATABASE] [flags]\n\ncreate credential within database\n\nFlags:\n -a, --app APP        app to run command against\n -n, --name NAME      name of the new credential within the database\n -r, --remote REMOTE  git remote of app to use\n\nExample:\n\n    heroku pg:credentials:create postgresql-something-12345 --name new-cred-name\n",
+        "helpLine": [
+          "pg:credentials:create [DATABASE]",
+          "create credential within database"
+        ]
+      },
+      {
+        "id": "pg:credentials:destroy",
+        "_version": "12.1.1",
+        "description": "destroy credential within database",
+        "plugin": {
+          "name": "@heroku-cli/plugin-pg",
+          "version": "2.9.9"
+        },
+        "hidden": false,
+        "aliases": [],
+        "help": "Usage: heroku pg:credentials:destroy [DATABASE] [flags]\n\ndestroy credential within database\n\nFlags:\n -a, --app APP          app to run command against\n -c, --confirm CONFIRM\n -n, --name NAME        unique identifier for the credential\n -r, --remote REMOTE    git remote of app to use\n\nExample:\n\n    heroku pg:credentials:destroy postgresql-transparent-56874 --name cred-name -a woodstock-production\n",
+        "helpLine": [
+          "pg:credentials:destroy [DATABASE]",
+          "destroy credential within database"
+        ]
+      },
+      {
+        "id": "pg:credentials:repair-default",
+        "_version": "12.1.1",
+        "description": "repair the permissions of the default credential within database",
+        "plugin": {
+          "name": "@heroku-cli/plugin-pg",
+          "version": "2.9.9"
+        },
+        "hidden": false,
+        "aliases": [],
+        "help": "Usage: heroku pg:credentials:repair-default [DATABASE] [flags]\n\nrepair the permissions of the default credential within database\n\nFlags:\n -a, --app APP          app to run command against\n -c, --confirm CONFIRM\n -r, --remote REMOTE    git remote of app to use\n\nExample:\n\n    heroku pg:credentials:repair-default postgresql-something-12345\n",
+        "helpLine": [
+          "pg:credentials:repair-default [DATABASE]",
+          "repair the permissions of the default credential within database"
+        ]
+      },
+      {
+        "id": "pg:credentials:rotate",
+        "_version": "12.1.1",
+        "description": "rotate the database credentials",
+        "plugin": {
+          "name": "@heroku-cli/plugin-pg",
+          "version": "2.9.9"
+        },
+        "hidden": false,
+        "aliases": [],
+        "help": "Usage: heroku pg:credentials:rotate [DATABASE] [flags]\n\nrotate the database credentials\n\nFlags:\n -a, --app APP          app to run command against\n -c, --confirm CONFIRM\n -n, --name NAME        which credential to rotate (default credentials if not\n                        specified)\n -r, --remote REMOTE    git remote of app to use\n --all                  rotate all credentials\n --force                forces rotating the targeted credentials\n",
+        "helpLine": [
+          "pg:credentials:rotate [DATABASE]",
+          "rotate the database credentials"
+        ]
+      },
+      {
+        "id": "pg:credentials:url",
+        "_version": "12.1.1",
+        "description": "show information on a database credential",
+        "plugin": {
+          "name": "@heroku-cli/plugin-pg",
+          "version": "2.9.9"
+        },
+        "hidden": false,
+        "aliases": [],
+        "help": "Usage: heroku pg:credentials:url [DATABASE] [flags]\n\nshow information on a database credential\n\nFlags:\n -a, --app APP        app to run command against\n -n, --name NAME      which credential to show (default credentials if not\n                      specified)\n -r, --remote REMOTE  git remote of app to use\n",
+        "helpLine": [
+          "pg:credentials:url [DATABASE]",
+          "show information on a database credential"
+        ]
+      },
+      {
+        "id": "pg:diagnose",
+        "_version": "12.1.1",
+        "description": "run or view diagnostics report",
+        "plugin": {
+          "name": "@heroku-cli/plugin-pg",
+          "version": "2.9.9"
+        },
+        "hidden": false,
+        "aliases": [],
+        "help": "Usage: heroku pg:diagnose [DATABASE|REPORT_ID] [flags]\n\nrun or view diagnostics report\n\nFlags:\n -a, --app APP        app to run command against\n -r, --remote REMOTE  git remote of app to use\n\ndefaults to DATABASE_URL database if no DATABASE is specified\nif REPORT_ID is specified instead, a previous report is displayed\n",
+        "helpLine": [
+          "pg:diagnose [DATABASE|REPORT_ID]",
+          "run or view diagnostics report"
+        ]
+      },
+      {
+        "id": "pg",
+        "_version": "12.1.1",
+        "description": "show database information",
+        "plugin": {
+          "name": "@heroku-cli/plugin-pg",
+          "version": "2.9.9"
+        },
+        "hidden": false,
+        "aliases": [],
+        "help": "Usage: heroku pg [DATABASE] [flags]\n\nshow database information\n\nFlags:\n -a, --app APP        app to run command against\n -r, --remote REMOTE  git remote of app to use\n",
+        "helpLine": [
+          "pg [DATABASE]",
+          "show database information"
+        ]
+      },
+      {
+        "id": "pg:info",
+        "_version": "12.1.1",
+        "description": "show database information",
+        "plugin": {
+          "name": "@heroku-cli/plugin-pg",
+          "version": "2.9.9"
+        },
+        "hidden": false,
+        "aliases": [],
+        "help": "Usage: heroku pg:info [DATABASE] [flags]\n\nshow database information\n\nFlags:\n -a, --app APP        app to run command against\n -r, --remote REMOTE  git remote of app to use\n",
+        "helpLine": [
+          "pg:info [DATABASE]",
+          "show database information"
+        ]
+      },
+      {
+        "id": "pg:kill",
+        "_version": "12.1.1",
+        "description": "kill a query",
+        "plugin": {
+          "name": "@heroku-cli/plugin-pg",
+          "version": "2.9.9"
+        },
+        "hidden": false,
+        "aliases": [],
+        "help": "Usage: heroku pg:kill PID [DATABASE] [flags]\n\nkill a query\n\nFlags:\n -a, --app APP        app to run command against\n -f, --force\n -r, --remote REMOTE  git remote of app to use\n",
+        "helpLine": [
+          "pg:kill PID [DATABASE]",
+          "kill a query"
+        ]
+      },
+      {
+        "id": "pg:killall",
+        "_version": "12.1.1",
+        "description": "terminates all connections for all credentials",
+        "plugin": {
+          "name": "@heroku-cli/plugin-pg",
+          "version": "2.9.9"
+        },
+        "hidden": false,
+        "aliases": [],
+        "help": "Usage: heroku pg:killall [DATABASE] [flags]\n\nterminates all connections for all credentials\n\nFlags:\n -a, --app APP        app to run command against\n -r, --remote REMOTE  git remote of app to use\n",
+        "helpLine": [
+          "pg:killall [DATABASE]",
+          "terminates all connections for all credentials"
+        ]
+      },
+      {
+        "id": "pg:outliers",
+        "_version": "12.1.1",
+        "description": "show 10 queries that have longest execution time in aggregate",
+        "plugin": {
+          "name": "@heroku-cli/plugin-pg",
+          "version": "2.9.9"
+        },
+        "hidden": false,
+        "aliases": [],
+        "help": "Usage: heroku pg:outliers [DATABASE] [flags]\n\nshow 10 queries that have longest execution time in aggregate\n\nFlags:\n -a, --app APP        app to run command against\n -n, --num NUM        the number of queries to display (default: 10)\n -r, --remote REMOTE  git remote of app to use\n -t, --truncate       truncate queries to 40 characters\n --reset              resets statistics gathered by pg_stat_statements\n",
+        "helpLine": [
+          "pg:outliers [DATABASE]",
+          "show 10 queries that have longest execution time in aggregate"
+        ]
+      },
+      {
+        "id": "pg:links",
+        "_version": "12.1.1",
+        "description": "lists all databases and information on link",
+        "plugin": {
+          "name": "@heroku-cli/plugin-pg",
+          "version": "2.9.9"
+        },
+        "hidden": false,
+        "aliases": [],
+        "help": "Usage: heroku pg:links [DATABASE] [flags]\n\nlists all databases and information on link\n\nFlags:\n -a, --app APP        app to run command against\n -r, --remote REMOTE  git remote of app to use\n",
+        "helpLine": [
+          "pg:links [DATABASE]",
+          "lists all databases and information on link"
+        ]
+      },
+      {
+        "id": "pg:links:create",
+        "_version": "12.1.1",
+        "description": "create a link between data stores",
+        "plugin": {
+          "name": "@heroku-cli/plugin-pg",
+          "version": "2.9.9"
+        },
+        "hidden": false,
+        "aliases": [],
+        "help": "Usage: heroku pg:links:create REMOTE DATABASE [flags]\n\ncreate a link between data stores\n\nFlags:\n -a, --app APP        app to run command against\n -r, --remote REMOTE  git remote of app to use\n --as AS              name of link to create\n\nExample:\n\n    heroku pg:links:create HEROKU_REDIS_RED HEROKU_POSTGRESQL_CERULEAN\n",
+        "helpLine": [
+          "pg:links:create REMOTE DATABASE",
+          "create a link between data stores"
+        ]
+      },
+      {
+        "id": "pg:links:destroy",
+        "_version": "12.1.1",
+        "description": "destroys a link between data stores",
+        "plugin": {
+          "name": "@heroku-cli/plugin-pg",
+          "version": "2.9.9"
+        },
+        "hidden": false,
+        "aliases": [],
+        "help": "Usage: heroku pg:links:destroy DATABASE LINK [flags]\n\ndestroys a link between data stores\n\nFlags:\n -a, --app APP          app to run command against\n -c, --confirm CONFIRM\n -r, --remote REMOTE    git remote of app to use\n\nExample:\n\n    heroku pg:links:destroy HEROKU_POSTGRESQL_CERULEAN redis-symmetrical-100\n",
+        "helpLine": [
+          "pg:links:destroy DATABASE LINK",
+          "destroys a link between data stores"
+        ]
+      },
+      {
+        "id": "pg:maintenance",
+        "_version": "12.1.1",
+        "description": "show current maintenance information",
+        "plugin": {
+          "name": "@heroku-cli/plugin-pg",
+          "version": "2.9.9"
+        },
+        "hidden": false,
+        "aliases": [],
+        "help": "Usage: heroku pg:maintenance [DATABASE] [flags]\n\nshow current maintenance information\n\nFlags:\n -a, --app APP        app to run command against\n -r, --remote REMOTE  git remote of app to use\n",
+        "helpLine": [
+          "pg:maintenance [DATABASE]",
+          "show current maintenance information"
+        ]
+      },
+      {
+        "id": "pg:maintenance:run",
+        "_version": "12.1.1",
+        "description": "start maintenance",
+        "plugin": {
+          "name": "@heroku-cli/plugin-pg",
+          "version": "2.9.9"
+        },
+        "hidden": false,
+        "aliases": [],
+        "help": "Usage: heroku pg:maintenance:run [DATABASE] [flags]\n\nstart maintenance\n\nFlags:\n -a, --app APP        app to run command against\n -f, --force\n -r, --remote REMOTE  git remote of app to use\n",
+        "helpLine": [
+          "pg:maintenance:run [DATABASE]",
+          "start maintenance"
+        ]
+      },
+      {
+        "id": "pg:maintenance:window",
+        "_version": "12.1.1",
+        "description": "set weekly maintenance window",
+        "plugin": {
+          "name": "@heroku-cli/plugin-pg",
+          "version": "2.9.9"
+        },
+        "hidden": false,
+        "aliases": [],
+        "help": "Usage: heroku pg:maintenance:window DATABASE WINDOW [flags]\n\nset weekly maintenance window\n\nFlags:\n -a, --app APP        app to run command against\n -r, --remote REMOTE  git remote of app to use\n\nAll times are in UTC.\n\nExample:\n\n    heroku pg:maintenance:window postgres-slippery-100 \"Sunday 06:00\"\n",
+        "helpLine": [
+          "pg:maintenance:window DATABASE WINDOW",
+          "set weekly maintenance window"
+        ]
+      },
+      {
+        "id": "pg:promote",
+        "_version": "12.1.1",
+        "description": "sets DATABASE as your DATABASE_URL",
+        "plugin": {
+          "name": "@heroku-cli/plugin-pg",
+          "version": "2.9.9"
+        },
+        "hidden": false,
+        "aliases": [],
+        "help": "Usage: heroku pg:promote DATABASE [flags]\n\nsets DATABASE as your DATABASE_URL\n\nFlags:\n -a, --app APP        app to run command against\n -r, --remote REMOTE  git remote of app to use\n",
+        "helpLine": [
+          "pg:promote DATABASE",
+          "sets DATABASE as your DATABASE_URL"
+        ]
+      },
+      {
+        "id": "pg:ps",
+        "_version": "12.1.1",
+        "description": "view active queries with execution time",
+        "plugin": {
+          "name": "@heroku-cli/plugin-pg",
+          "version": "2.9.9"
+        },
+        "hidden": false,
+        "aliases": [],
+        "help": "Usage: heroku pg:ps [DATABASE] [flags]\n\nview active queries with execution time\n\nFlags:\n -a, --app APP        app to run command against\n -r, --remote REMOTE  git remote of app to use\n -v, --verbose\n",
+        "helpLine": [
+          "pg:ps [DATABASE]",
+          "view active queries with execution time"
+        ]
+      },
+      {
+        "id": "pg:psql",
+        "_version": "12.1.1",
+        "description": "open a psql shell to the database",
+        "plugin": {
+          "name": "@heroku-cli/plugin-pg",
+          "version": "2.9.9"
+        },
+        "hidden": false,
+        "aliases": [],
+        "help": "Usage: heroku pg:psql [DATABASE] [flags]\n\nopen a psql shell to the database\n\nFlags:\n -a, --app APP            app to run command against\n -c, --command COMMAND    SQL command to run\n -r, --remote REMOTE      git remote of app to use\n --credential CREDENTIAL  credential to use\n",
+        "helpLine": [
+          "pg:psql [DATABASE]",
+          "open a psql shell to the database"
+        ]
+      },
+      {
+        "id": "psql",
+        "_version": "12.1.1",
+        "description": "open a psql shell to the database",
+        "plugin": {
+          "name": "@heroku-cli/plugin-pg",
+          "version": "2.9.9"
+        },
+        "hidden": false,
+        "aliases": [],
+        "help": "Usage: heroku psql [DATABASE] [flags]\n\nopen a psql shell to the database\n\nFlags:\n -a, --app APP            app to run command against\n -c, --command COMMAND    SQL command to run\n -r, --remote REMOTE      git remote of app to use\n --credential CREDENTIAL  credential to use\n",
+        "helpLine": [
+          "psql [DATABASE]",
+          "open a psql shell to the database"
+        ]
+      },
+      {
+        "id": "pg:push",
+        "_version": "12.1.1",
+        "description": "push local or remote into Heroku database",
+        "plugin": {
+          "name": "@heroku-cli/plugin-pg",
+          "version": "2.9.9"
+        },
+        "hidden": false,
+        "aliases": [],
+        "help": "Usage: heroku pg:push SOURCE TARGET [flags]\n\npush local or remote into Heroku database\n\nFlags:\n -a, --app APP                            app to run command against\n -r, --remote REMOTE                      git remote of app to use\n --exclude-table-data EXCLUDE-TABLE-DATA  tables for which data should be\n                                          excluded (use ';' to split multiple\n                                          names)\n\nPush from SOURCE into TARGET. TARGET must be empty.\n\nTo empty a Heroku database for push run `heroku pg:reset`\n\nSOURCE must be either the name of a database existing on your localhost or the\nfully qualified URL of a remote database.\n\nExamples:\n\n    # push mylocaldb into a Heroku DB named postgresql-swimmingly-100\n    $ heroku pg:push mylocaldb postgresql-swimmingly-100\n\n    # push remote DB at postgres://myhost/mydb into a Heroku DB named postgresql-swimmingly-100\n    $ heroku pg:push postgres://myhost/mydb postgresql-swimmingly-100\n",
+        "helpLine": [
+          "pg:push SOURCE TARGET",
+          "push local or remote into Heroku database"
+        ]
+      },
+      {
+        "id": "pg:pull",
+        "_version": "12.1.1",
+        "description": "pull Heroku database into local or remote database",
+        "plugin": {
+          "name": "@heroku-cli/plugin-pg",
+          "version": "2.9.9"
+        },
+        "hidden": false,
+        "aliases": [],
+        "help": "Usage: heroku pg:pull SOURCE TARGET [flags]\n\npull Heroku database into local or remote database\n\nFlags:\n -a, --app APP                            app to run command against\n -r, --remote REMOTE                      git remote of app to use\n --exclude-table-data EXCLUDE-TABLE-DATA  tables for which data should be\n                                          excluded (use ';' to split multiple\n                                          names)\n\nPull from SOURCE into TARGET.\n\nTARGET must be one of:\n  * a database name (i.e. on a local PostgreSQL server)  => TARGET must not exist and will be created\n  * a fully qualified URL to a local PostgreSQL server   => TARGET must not exist and will be created\n  * a fully qualified URL to a remote PostgreSQL server  => TARGET must exist and be empty\n\nTo delete a local database run `dropdb TARGET`\nTo create an empty remote database, run `createdb` with connection command-line options (run `createdb --help` for details).\n\nExamples:\n\n    # pull Heroku DB named postgresql-swimmingly-100 into local DB mylocaldb that must not exist\n    $ heroku pg:pull postgresql-swimmingly-100 mylocaldb --app sushi\n\n    # pull Heroku DB named postgresql-swimmingly-100 into empty remote DB at postgres://myhost/mydb\n    $ heroku pg:pull postgresql-swimmingly-100 postgres://myhost/mydb --app sushi\n",
+        "helpLine": [
+          "pg:pull SOURCE TARGET",
+          "pull Heroku database into local or remote database"
+        ]
+      },
+      {
+        "id": "pg:reset",
+        "_version": "12.1.1",
+        "description": "delete all data in DATABASE",
+        "plugin": {
+          "name": "@heroku-cli/plugin-pg",
+          "version": "2.9.9"
+        },
+        "hidden": false,
+        "aliases": [],
+        "help": "Usage: heroku pg:reset [DATABASE] [flags]\n\ndelete all data in DATABASE\n\nFlags:\n -a, --app APP          app to run command against\n -c, --confirm CONFIRM\n -r, --remote REMOTE    git remote of app to use\n",
+        "helpLine": [
+          "pg:reset [DATABASE]",
+          "delete all data in DATABASE"
+        ]
+      },
+      {
+        "id": "pg:settings",
+        "_version": "12.1.1",
+        "description": "show your current database settings",
+        "plugin": {
+          "name": "@heroku-cli/plugin-pg",
+          "version": "2.9.9"
+        },
+        "hidden": false,
+        "aliases": [],
+        "help": "Usage: heroku pg:settings [DATABASE] [flags]\n\nshow your current database settings\n\nFlags:\n -a, --app APP        app to run command against\n -r, --remote REMOTE  git remote of app to use\n",
+        "helpLine": [
+          "pg:settings [DATABASE]",
+          "show your current database settings"
+        ]
+      },
+      {
+        "id": "pg:settings:log-lock-waits",
+        "_version": "12.1.1",
+        "description": "Controls whether a log message is produced when a session waits longer than the deadlock_timeout to acquire a lock. deadlock_timeout is set to 1 second",
+        "plugin": {
+          "name": "@heroku-cli/plugin-pg",
+          "version": "2.9.9"
+        },
+        "hidden": false,
+        "aliases": [],
+        "help": "Usage: heroku pg:settings:log-lock-waits [VALUE] [DATABASE] [flags]\n\nControls whether a log message is produced when a session waits longer than the deadlock_timeout to acquire a lock. deadlock_timeout is set to 1 second\n\nFlags:\n -a, --app APP        app to run command against\n -r, --remote REMOTE  git remote of app to use\n\nDelays due to lock contention occur when multiple transactions are trying to access the same resource at the same time.\nApplications and their query patterns should try to avoid changes to many different tables within the same transaction.\n",
+        "helpLine": [
+          "pg:settings:log-lock-waits [VALUE] [DATABASE]",
+          "Controls whether a log message is produced when a session waits longer than the deadlock_timeout to acquire a lock. deadlock_timeout is set to 1 second"
+        ]
+      },
+      {
+        "id": "pg:settings:log-min-duration-statement",
+        "_version": "12.1.1",
+        "description": "The duration of each completed statement will be logged if the statement completes after the time specified by VALUE.\nVALUE needs to specified as a whole number, in milliseconds.",
+        "plugin": {
+          "name": "@heroku-cli/plugin-pg",
+          "version": "2.9.9"
+        },
+        "hidden": false,
+        "aliases": [],
+        "help": "Usage: heroku pg:settings:log-min-duration-statement [VALUE] [DATABASE] [flags]\n\nThe duration of each completed statement will be logged if the statement completes after the time specified by VALUE.\nVALUE needs to specified as a whole number, in milliseconds.\n\nFlags:\n -a, --app APP        app to run command against\n -r, --remote REMOTE  git remote of app to use\n\nSetting log_min_duration_statement to zero prints all statement durations and -1 will disable logging statement durations.\n",
+        "helpLine": [
+          "pg:settings:log-min-duration-statement [VALUE] [DATABASE]",
+          "The duration of each completed statement will be logged if the statement completes after the time specified by VALUE.\nVALUE needs to specified as a whole number, in milliseconds."
+        ]
+      },
+      {
+        "id": "pg:settings:log-statement",
+        "_version": "12.1.1",
+        "description": "log_statement controls which SQL statements are logged.",
+        "plugin": {
+          "name": "@heroku-cli/plugin-pg",
+          "version": "2.9.9"
+        },
+        "hidden": false,
+        "aliases": [],
+        "help": "Usage: heroku pg:settings:log-statement [VALUE] [DATABASE] [flags]\n\nlog_statement controls which SQL statements are logged.\n\nFlags:\n -a, --app APP        app to run command against\n -r, --remote REMOTE  git remote of app to use\n\nValid values for VALUE:\nnone - No statements are logged\nddl  - All data definition statements, such as CREATE, ALTER and DROP will be logged\nmod  - Includes all statements from ddl as well as data-modifying statements such as INSERT, UPDATE, DELETE, TRUNCATE, COPY\nall  - All statements are logged\n",
+        "helpLine": [
+          "pg:settings:log-statement [VALUE] [DATABASE]",
+          "log_statement controls which SQL statements are logged."
+        ]
+      },
+      {
+        "id": "pg:unfollow",
+        "_version": "12.1.1",
+        "description": "stop a replica from following and make it a writeable database",
+        "plugin": {
+          "name": "@heroku-cli/plugin-pg",
+          "version": "2.9.9"
+        },
+        "hidden": false,
+        "aliases": [],
+        "help": "Usage: heroku pg:unfollow DATABASE [flags]\n\nstop a replica from following and make it a writeable database\n\nFlags:\n -a, --app APP          app to run command against\n -c, --confirm CONFIRM\n -r, --remote REMOTE    git remote of app to use\n",
+        "helpLine": [
+          "pg:unfollow DATABASE",
+          "stop a replica from following and make it a writeable database"
+        ]
+      },
+      {
+        "id": "pg:upgrade",
+        "_version": "12.1.1",
+        "description": "unfollow a database and upgrade it to the latest stable PostgreSQL version",
+        "plugin": {
+          "name": "@heroku-cli/plugin-pg",
+          "version": "2.9.9"
+        },
+        "hidden": false,
+        "aliases": [],
+        "help": "Usage: heroku pg:upgrade [DATABASE] [flags]\n\nunfollow a database and upgrade it to the latest stable PostgreSQL version\n\nFlags:\n -a, --app APP          app to run command against\n -c, --confirm CONFIRM\n -r, --remote REMOTE    git remote of app to use\n -v, --version VERSION  PostgreSQL version to upgrade to\n\nto upgrade to another PostgreSQL version, use pg:copy instead\n",
+        "helpLine": [
+          "pg:upgrade [DATABASE]",
+          "unfollow a database and upgrade it to the latest stable PostgreSQL version"
+        ]
+      },
+      {
+        "id": "pg:wait",
+        "_version": "12.1.1",
+        "description": "blocks until database is available",
+        "plugin": {
+          "name": "@heroku-cli/plugin-pg",
+          "version": "2.9.9"
+        },
+        "hidden": false,
+        "aliases": [],
+        "help": "Usage: heroku pg:wait [DATABASE] [flags]\n\nblocks until database is available\n\nFlags:\n -a, --app APP                  app to run command against\n -r, --remote REMOTE            git remote of app to use\n --no-notify                    do not show OS notification\n --wait-interval WAIT-INTERVAL  how frequently to poll in seconds (to avoid rate\n                                limiting)\n",
+        "helpLine": [
+          "pg:wait [DATABASE]",
+          "blocks until database is available"
+        ]
+      },
+      {
+        "id": "pg:connection-pooling:attach",
+        "_version": "12.1.1",
+        "description": "add an attachment to a database using connection pooling",
+        "plugin": {
+          "name": "@heroku-cli/plugin-pg",
+          "version": "2.9.9"
+        },
+        "hidden": false,
+        "aliases": [],
+        "help": "Usage: heroku pg:connection-pooling:attach [DATABASE] [flags]\n\nadd an attachment to a database using connection pooling\n\nFlags:\n -a, --app APP                app to run command against\n -n, --credential CREDENTIAL  name of the credential within the database\n -r, --remote REMOTE          git remote of app to use\n --as AS                      name for add-on attachment\n\nExample:\n\n  heroku pg:connection-pooling:attach postgresql-something-12345 --credential cred-name\n",
+        "helpLine": [
+          "pg:connection-pooling:attach [DATABASE]",
+          "add an attachment to a database using connection pooling"
+        ]
+      }
+    ],
+    "topics": [
+      {
+        "name": "pg",
+        "description": "manage postgresql databases"
+      }
+    ]
+  }
+}

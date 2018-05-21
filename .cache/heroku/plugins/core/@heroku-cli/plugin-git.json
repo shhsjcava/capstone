@@ -1,0 +1,40 @@
+{
+  "invalidate": "6.99.0-ec9edad/2.5.28",
+  "manifest": {
+    "commands": [
+      {
+        "id": "git:remote",
+        "_version": "12.1.1",
+        "description": "adds a git remote to an app repo",
+        "plugin": {
+          "name": "@heroku-cli/plugin-git",
+          "version": "2.5.28"
+        },
+        "hidden": false,
+        "aliases": [],
+        "help": "Usage: heroku git:remote [flags]\n\nadds a git remote to an app repo\n\nFlags:\n -a, --app APP        the Heroku app to use\n -r, --remote REMOTE  the git remote to create\n --ssh-git            use SSH git protocol\n\nextra arguments will be passed to git remote add\n\nExamples:\n\n    # set git remote heroku to https://git.heroku.com/example.git\n    $ heroku git:remote -a example\n\n    # set git remote heroku-staging to https://git.heroku.com/example-staging.git\n    $ heroku git:remote --remote heroku-staging -a example\n",
+        "helpLine": [
+          "git:remote",
+          "adds a git remote to an app repo"
+        ]
+      },
+      {
+        "id": "git:clone",
+        "_version": "12.1.1",
+        "description": "clones a heroku app to your local machine at DIRECTORY (defaults to app name)",
+        "plugin": {
+          "name": "@heroku-cli/plugin-git",
+          "version": "2.5.28"
+        },
+        "hidden": false,
+        "aliases": [],
+        "help": "Usage: heroku git:clone [DIRECTORY] [flags]\n\nclones a heroku app to your local machine at DIRECTORY (defaults to app name)\n\nDIRECTORY  where to clone the app\n\nFlags:\n -a, --app APP        the Heroku app to use\n -r, --remote REMOTE  the git remote to create, default \"heroku\"\n --ssh-git            use SSH git protocol\n\nExamples:\n\n    $ heroku git:clone -a example\n    Cloning into 'example'...\n    remote: Counting objects: 42, done.\n    ...\n",
+        "helpLine": [
+          "git:clone [DIRECTORY]",
+          "clones a heroku app to your local machine at DIRECTORY (defaults to app name)"
+        ]
+      }
+    ],
+    "topics": []
+  }
+}

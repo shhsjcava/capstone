@@ -1,0 +1,48 @@
+
+{% extends 'base.html' %}
+{% block head %}
+{{ super() }}
+  <title>GO PELI | HOME</title>
+<link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/shome.css') }}">
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+<style>#btn{background-color:#00a0b1;color:#fff;width:150px;height:30px;font-family:segoe ui light;text-align:center;padding-top:10px;-webkit-transition:-webkit-transform .5s, background .5s;}#btn:hover{background-color:#fff;color:#00a0b1;border:1px solid #00a0b1;}a{text-decoration:none;}</style>
+
+{% endblock %}
+
+{% block main %}
+<div class="contentWrapper">
+<div id="contentLeft">
+
+<ul id="leftNavigation">
+    {% for course in courselist %}
+        
+      <li class="active"> <a href='{{url_for("lechome2", cid=course, uid = lecturer)}}'> <i class="fa fa-coffee leftNavIcon"></i>  {{course }} </a>
+
+      </li>
+        {% endfor %}
+
+    </ul>
+</form>
+</div>
+
+<div id="contentRight">
+  <h1>WElcome {{lecturer}}</h1>
+    Select a course!
+</div>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="js/object/VerticalNavigation.min.js"></script>
+<script type="text/javascript">
+$(function() {
+
+    var verticalNavigation = new SSDSystem.VerticalNavigation();
+    verticalNavigation.init();
+
+});
+</script>
+
+
+<br>
+
+{% endblock %}

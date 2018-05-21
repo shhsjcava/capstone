@@ -1,0 +1,77 @@
+{
+  "invalidate": "6.99.0-ec9edad/2.3.4",
+  "manifest": {
+    "commands": [
+      {
+        "id": "ps:exec",
+        "_version": "12.1.1",
+        "description": "Create an SSH session to a dyno",
+        "plugin": {
+          "name": "@heroku-cli/plugin-ps-exec",
+          "version": "2.3.4"
+        },
+        "hidden": false,
+        "aliases": [],
+        "help": "Usage: heroku ps:exec [flags]\n\nCreate an SSH session to a dyno\n\nFlags:\n -a, --app APP        app to run command against\n -d, --dyno DYNO      specify the dyno to connect to\n -r, --remote REMOTE  git remote of app to use\n --ssh                use native ssh\n --status             lists the status of the SSH server in the dyno\n\nExample:\n\n    $ heroku ps:exec 'node -i' --app murmuring-headland-14719\n",
+        "helpLine": [
+          "ps:exec",
+          "Create an SSH session to a dyno"
+        ]
+      },
+      {
+        "id": "ps:socks",
+        "_version": "12.1.1",
+        "description": "Launch a SOCKS proxy into a dyno",
+        "plugin": {
+          "name": "@heroku-cli/plugin-ps-exec",
+          "version": "2.3.4"
+        },
+        "hidden": false,
+        "aliases": [],
+        "help": "Usage: heroku ps:socks [flags]\n\nLaunch a SOCKS proxy into a dyno\n\nFlags:\n -a, --app APP        app to run command against\n -d, --dyno DYNO      specify the dyno to connect to\n -r, --remote REMOTE  git remote of app to use\n\nExample:\n\n    $ heroku ps:socks --app murmuring-headland-14719\n    Establishing credentials... done\n    SOCKSv5 proxy server started on port 1080\n    Use CTRL+C to stop the proxy\n",
+        "helpLine": [
+          "ps:socks",
+          "Launch a SOCKS proxy into a dyno"
+        ]
+      },
+      {
+        "id": "ps:forward",
+        "_version": "12.1.1",
+        "description": "Forward traffic on a local port to a dyno",
+        "plugin": {
+          "name": "@heroku-cli/plugin-ps-exec",
+          "version": "2.3.4"
+        },
+        "hidden": false,
+        "aliases": [],
+        "help": "Usage: heroku ps:forward PORT [flags]\n\nForward traffic on a local port to a dyno\n\nFlags:\n -a, --app APP              app to run command against\n -d, --dyno DYNO            specify the dyno to connect to\n -p, --localPort LOCALPORT  the local port to use\n -r, --remote REMOTE        git remote of app to use\n\nExample:\n\n    $ heroku ps:forward 8080 --app murmuring-headland-14719\n",
+        "helpLine": [
+          "ps:forward PORT",
+          "Forward traffic on a local port to a dyno"
+        ]
+      },
+      {
+        "id": "ps:copy",
+        "_version": "12.1.1",
+        "description": "Copy a file from a dyno to the local filesystem",
+        "plugin": {
+          "name": "@heroku-cli/plugin-ps-exec",
+          "version": "2.3.4"
+        },
+        "hidden": false,
+        "aliases": [],
+        "help": "Usage: heroku ps:copy FILE [flags]\n\nCopy a file from a dyno to the local filesystem\n\nFlags:\n -a, --app APP        app to run command against\n -d, --dyno DYNO      specify the dyno to connect to\n -o, --output OUTPUT  the name of the output file\n -r, --remote REMOTE  git remote of app to use\n\nExample:\n\n    $ heroku ps:copy FILENAME --app murmuring-headland-14719\n",
+        "helpLine": [
+          "ps:copy FILE",
+          "Copy a file from a dyno to the local filesystem"
+        ]
+      }
+    ],
+    "topics": [
+      {
+        "name": "ps",
+        "description": "Client tools for Heroku Exec"
+      }
+    ]
+  }
+}

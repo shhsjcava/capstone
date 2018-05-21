@@ -1,0 +1,417 @@
+{
+  "invalidate": "6.99.0-ec9edad/2.12.2",
+  "manifest": {
+    "commands": [
+      {
+        "id": "spaces",
+        "_version": "12.1.1",
+        "description": "list available spaces",
+        "plugin": {
+          "name": "@heroku-cli/plugin-spaces",
+          "version": "2.12.2"
+        },
+        "hidden": false,
+        "aliases": [],
+        "help": "Usage: heroku spaces [flags]\n\nlist available spaces\n\nFlags:\n -o, --org ORG    team to use\n -t, --team TEAM  team to use\n --json           output in json format\n",
+        "helpLine": [
+          "spaces",
+          "list available spaces"
+        ]
+      },
+      {
+        "id": "spaces:create",
+        "_version": "12.1.1",
+        "description": "create a new space",
+        "plugin": {
+          "name": "@heroku-cli/plugin-spaces",
+          "version": "2.12.2"
+        },
+        "hidden": false,
+        "aliases": [],
+        "help": "Usage: heroku spaces:create [SPACE] [flags]\n\ncreate a new space\n\nFlags:\n -o, --org ORG      team to use\n -s, --space SPACE  name of space to create\n -t, --team TEAM    team to use\n --region REGION    region name\n\nExample:\n\n    $ heroku spaces:create --space my-space --team my-team --region oregon\n    Creating space my-space in team my-team... done\n    === my-space\n    ID:         e7b99e37-69b3-4475-ad47-a5cc5d75fd9f\n    Team:       my-team\n    Region:     oregon\n    State:      allocating\n    Created at: 2016-01-06T03:23:13Z\n",
+        "helpLine": [
+          "spaces:create [SPACE]",
+          "create a new space"
+        ]
+      },
+      {
+        "id": "spaces:destroy",
+        "_version": "12.1.1",
+        "description": "destroy a space",
+        "plugin": {
+          "name": "@heroku-cli/plugin-spaces",
+          "version": "2.12.2"
+        },
+        "hidden": false,
+        "aliases": [],
+        "help": "Usage: heroku spaces:destroy [SPACE] [flags]\n\ndestroy a space\n\nFlags:\n -s, --space SPACE  space to destroy\n --confirm CONFIRM  set to space name to bypass confirm prompt\n\nExample:\n\n    $ heroku spaces:destroy --space my-space\n    Destroying my-space... done\n",
+        "helpLine": [
+          "spaces:destroy [SPACE]",
+          "destroy a space"
+        ]
+      },
+      {
+        "id": "spaces:info",
+        "_version": "12.1.1",
+        "description": "show info about a space",
+        "plugin": {
+          "name": "@heroku-cli/plugin-spaces",
+          "version": "2.12.2"
+        },
+        "hidden": false,
+        "aliases": [],
+        "help": "Usage: heroku spaces:info [SPACE] [flags]\n\nshow info about a space\n\nFlags:\n -s, --space SPACE  space to get info of\n --json             output in json format\n",
+        "helpLine": [
+          "spaces:info [SPACE]",
+          "show info about a space"
+        ]
+      },
+      {
+        "id": "spaces:rename",
+        "_version": "12.1.1",
+        "description": "renames a space",
+        "plugin": {
+          "name": "@heroku-cli/plugin-spaces",
+          "version": "2.12.2"
+        },
+        "hidden": false,
+        "aliases": [],
+        "help": "Usage: heroku spaces:rename [flags]\n\nrenames a space\n\nFlags:\n --from FROM  current name of space\n --to TO      desired name of space\n\nExample:\n\n    $ heroku spaces:rename --from old-space-name --to new-space-name\n    Renaming space old-space-name to new-space-name... done\n",
+        "helpLine": [
+          "spaces:rename",
+          "renames a space"
+        ]
+      },
+      {
+        "id": "spaces:wait",
+        "_version": "12.1.1",
+        "description": "wait for a space to be created",
+        "plugin": {
+          "name": "@heroku-cli/plugin-spaces",
+          "version": "2.12.2"
+        },
+        "hidden": false,
+        "aliases": [],
+        "help": "Usage: heroku spaces:wait [SPACE] [flags]\n\nwait for a space to be created\n\nFlags:\n -i, --interval INTERVAL  seconds to wait between poll intervals\n -s, --space SPACE        space to get info of\n -t, --timeout TIMEOUT    maximum number of seconds to wait\n --json                   output in json format\n",
+        "helpLine": [
+          "spaces:wait [SPACE]",
+          "wait for a space to be created"
+        ]
+      },
+      {
+        "id": "spaces:peering:info",
+        "_version": "12.1.1",
+        "description": "display the information necessary to initiate a peering connection",
+        "plugin": {
+          "name": "@heroku-cli/plugin-spaces",
+          "version": "2.12.2"
+        },
+        "hidden": false,
+        "aliases": [],
+        "help": "Usage: heroku spaces:peering:info [SPACE] [flags]\n\ndisplay the information necessary to initiate a peering connection\n\nFlags:\n -s, --space SPACE  space to get peering info from\n --json             output in json format\n\nExample:\n\n    $ heroku spaces:peering:info example-space\n    === example-space Peering Info\n    AWS Account ID:    012345678910\n    AWS Region:        us-west-2\n    AWS VPC ID:        vpc-baadf00d\n    AWS VPC CIDR:      10.0.0.0/16\n    Dyno CIDRs:        10.0.128.0/20, 10.0.144.0/20\n    Unavailable CIDRs: 10.1.0.0/16\n\nYou will use the information provied by this command to establish a peering connection request from your AWS VPC to your private space.\n\nTo start the peering process, go into your AWS console for the VPC you would like peered with your Private Space,\nnavigate to the VPC service, choose the \"Peering Connections\" option and click the \"Create peering connection\" button.\n\n- The AWS Account ID and VPC ID are necessary for the AWS VPC Peering connection wizard.\n- You will also need to configure your VPC route table to route the Dyno CIDRs through the peering connection.\n\nOnce you've established the peering connection request, you can use the spaces:peerings:accept command to accept and\nconfigure the peering connection for the space.\n",
+        "helpLine": [
+          "spaces:peering:info [SPACE]",
+          "display the information necessary to initiate a peering connection"
+        ]
+      },
+      {
+        "id": "spaces:peerings",
+        "_version": "12.1.1",
+        "description": "list peering connections for a space",
+        "plugin": {
+          "name": "@heroku-cli/plugin-spaces",
+          "version": "2.12.2"
+        },
+        "hidden": false,
+        "aliases": [],
+        "help": "Usage: heroku spaces:peerings [SPACE] [flags]\n\nlist peering connections for a space\n\nFlags:\n -s, --space SPACE  space to get peer list from\n --json             output in json format\n",
+        "helpLine": [
+          "spaces:peerings [SPACE]",
+          "list peering connections for a space"
+        ]
+      },
+      {
+        "id": "spaces:peerings:accept",
+        "_version": "12.1.1",
+        "description": "accepts a pending peering request for a private space",
+        "plugin": {
+          "name": "@heroku-cli/plugin-spaces",
+          "version": "2.12.2"
+        },
+        "hidden": false,
+        "aliases": [],
+        "help": "Usage: heroku spaces:peerings:accept [PCXID] [flags]\n\naccepts a pending peering request for a private space\n\nFlags:\n -p, --pcxid PCXID  PCX ID of a pending peering\n -s, --space SPACE  space to get peering info from\n\nExample:\n\n    $ heroku spaces:peerings:accept pcx-4bd27022 --space example-space\n    Accepting and configuring peering connection pcx-4bd27022\n",
+        "helpLine": [
+          "spaces:peerings:accept [PCXID]",
+          "accepts a pending peering request for a private space"
+        ]
+      },
+      {
+        "id": "spaces:peerings:destroy",
+        "_version": "12.1.1",
+        "description": "destroys an active peering connection in a private space",
+        "plugin": {
+          "name": "@heroku-cli/plugin-spaces",
+          "version": "2.12.2"
+        },
+        "hidden": false,
+        "aliases": [],
+        "help": "Usage: heroku spaces:peerings:destroy [PCXID] [flags]\n\ndestroys an active peering connection in a private space\n\nFlags:\n -p, --pcxid PCXID  PCX ID of a pending peering\n -s, --space SPACE  space to get peering info from\n --confirm CONFIRM  set to PCX ID to bypass confirm prompt\n\nExample:\n\n    $ heroku spaces:peerings:destroy pcx-4bd27022 --confirm pcx-4bd27022 --space example-space\n    Tearing down peering connection pcx-4bd27022\n",
+        "helpLine": [
+          "spaces:peerings:destroy [PCXID]",
+          "destroys an active peering connection in a private space"
+        ]
+      },
+      {
+        "id": "spaces:vpn:create",
+        "_version": "12.1.1",
+        "description": "create VPN",
+        "plugin": {
+          "name": "@heroku-cli/plugin-spaces",
+          "version": "2.12.2"
+        },
+        "hidden": true,
+        "aliases": [],
+        "help": "Usage: heroku spaces:vpn:create [SPACE] [flags]\n\ncreate VPN\n\nFlags:\n -c, --cidrs CIDRS  a list of routable CIDRs separated by commas\n -i, --ip IP        public IP of customer gateway\n -s, --space SPACE  space name\n\nExample:\n\n    $ heroku spaces:vpn:create --ip 35.161.69.30 --cidrs 172.16.0.0/16,10.0.0.0/24 --space my-space\n    Creating VPN in space my-space... done\n    ▸    Use spaces:vpn:wait to track allocation.\n",
+        "helpLine": [
+          "spaces:vpn:create [SPACE]",
+          "create VPN"
+        ]
+      },
+      {
+        "id": "spaces:vpn:info",
+        "_version": "12.1.1",
+        "description": "display the information for VPN",
+        "plugin": {
+          "name": "@heroku-cli/plugin-spaces",
+          "version": "2.12.2"
+        },
+        "hidden": true,
+        "aliases": [],
+        "help": "Usage: heroku spaces:vpn:info [SPACE] [flags]\n\ndisplay the information for VPN\n\nFlags:\n -s, --space SPACE  space to get VPN info from\n --json             output in json format\n\nExample:\n\n    $ heroku spaces:vpn:info my-space\n    === my-space VPN Info\n    ID:             123456789012\n    Public IP:      35.161.69.30\n    Routable CIDRs: 172.16.0.0/16\n    State:          available\n    === my-space Tunnel Info\n    VPN Tunnel  IP Address     Status  Status Last Changed   Details\n    ──────────  ─────────────  ──────  ────────────────────  ──────────────\n    Tunnel 1    52.44.146.197  UP      2016-10-25T22:09:05Z  status message\n    Tunnel 2    52.44.146.197  UP      2016-10-25T22:09:05Z  status message\n",
+        "helpLine": [
+          "spaces:vpn:info [SPACE]",
+          "display the information for VPN"
+        ]
+      },
+      {
+        "id": "spaces:vpn:config",
+        "_version": "12.1.1",
+        "description": "display the configuration information for VPN",
+        "plugin": {
+          "name": "@heroku-cli/plugin-spaces",
+          "version": "2.12.2"
+        },
+        "hidden": true,
+        "aliases": [],
+        "help": "Usage: heroku spaces:vpn:config [SPACE] [flags]\n\ndisplay the configuration information for VPN\n\nFlags:\n -s, --space SPACE  space to get VPN config from\n\nExample:\n\n    $ heroku spaces:vpn:config my-space\n",
+        "helpLine": [
+          "spaces:vpn:config [SPACE]",
+          "display the configuration information for VPN"
+        ]
+      },
+      {
+        "id": "spaces:vpn:wait",
+        "_version": "12.1.1",
+        "description": "wait for VPN to be created",
+        "plugin": {
+          "name": "@heroku-cli/plugin-spaces",
+          "version": "2.12.2"
+        },
+        "hidden": true,
+        "aliases": [],
+        "help": "Usage: heroku spaces:vpn:wait [SPACE] [flags]\n\nwait for VPN to be created\n\nFlags:\n -i, --interval INTERVAL  seconds to wait between poll intervals\n -s, --space SPACE        space to wait for VPN from\n -t, --timeout TIMEOUT    maximum number of seconds to wait\n --json                   output in json format\n",
+        "helpLine": [
+          "spaces:vpn:wait [SPACE]",
+          "wait for VPN to be created"
+        ]
+      },
+      {
+        "id": "spaces:vpn:destroy",
+        "_version": "12.1.1",
+        "description": "destroys VPN in a private space",
+        "plugin": {
+          "name": "@heroku-cli/plugin-spaces",
+          "version": "2.12.2"
+        },
+        "hidden": true,
+        "aliases": [],
+        "help": "Usage: heroku spaces:vpn:destroy [SPACE] [flags]\n\ndestroys VPN in a private space\n\nFlags:\n -s, --space SPACE  space to get peering info from\n --confirm CONFIRM  set to space name bypass confirm prompt\n\nExample:\n\n    $ heroku spaces:vpn:destroy --confirm --space my-space\n    Tearing down VPN in space my-space\n",
+        "helpLine": [
+          "spaces:vpn:destroy [SPACE]",
+          "destroys VPN in a private space"
+        ]
+      },
+      {
+        "id": "spaces:ps",
+        "_version": "12.1.1",
+        "description": "list dynos for a space",
+        "plugin": {
+          "name": "@heroku-cli/plugin-spaces",
+          "version": "2.12.2"
+        },
+        "hidden": false,
+        "aliases": [],
+        "help": "Usage: heroku spaces:ps [SPACE] [flags]\n\nlist dynos for a space\n\nFlags:\n -s, --space SPACE  space to get dynos of\n --json             output in json format\n",
+        "helpLine": [
+          "spaces:ps [SPACE]",
+          "list dynos for a space"
+        ]
+      },
+      {
+        "id": "spaces:topology",
+        "_version": "12.1.1",
+        "description": "show space topology",
+        "plugin": {
+          "name": "@heroku-cli/plugin-spaces",
+          "version": "2.12.2"
+        },
+        "hidden": false,
+        "aliases": [],
+        "help": "Usage: heroku spaces:topology [SPACE] [flags]\n\nshow space topology\n\nFlags:\n -s, --space SPACE  space to get topology of\n --json             output in json format\n",
+        "helpLine": [
+          "spaces:topology [SPACE]",
+          "show space topology"
+        ]
+      },
+      {
+        "id": "drains:get",
+        "_version": "12.1.1",
+        "description": "display the log drain for a space",
+        "plugin": {
+          "name": "@heroku-cli/plugin-spaces",
+          "version": "2.12.2"
+        },
+        "hidden": true,
+        "aliases": [],
+        "help": "Usage: heroku drains:get [flags]\n\ndisplay the log drain for a space\n\nFlags:\n -s, --space SPACE  space for which to get log drain\n --json             output in json format\n",
+        "helpLine": [
+          "drains:get",
+          "display the log drain for a space"
+        ]
+      },
+      {
+        "id": "drains:set",
+        "_version": "12.1.1",
+        "description": "replaces the log drain for a space",
+        "plugin": {
+          "name": "@heroku-cli/plugin-spaces",
+          "version": "2.12.2"
+        },
+        "hidden": true,
+        "aliases": [],
+        "help": "Usage: heroku drains:set URL [flags]\n\nreplaces the log drain for a space\n\nFlags:\n -s, --space SPACE  space for which to set log drain\n",
+        "helpLine": [
+          "drains:set URL",
+          "replaces the log drain for a space"
+        ]
+      },
+      {
+        "id": "trusted-ips",
+        "_version": "12.1.1",
+        "description": "list trusted IP ranges for a space",
+        "plugin": {
+          "name": "@heroku-cli/plugin-spaces",
+          "version": "2.12.2"
+        },
+        "hidden": false,
+        "aliases": [],
+        "help": "Usage: heroku trusted-ips [SPACE] [flags]\n\nlist trusted IP ranges for a space\n\nFlags:\n -s, --space SPACE  space to get inbound rules from\n --json             output in json format\n\nTrusted IP ranges are only available on Private Spaces.\n\nThe space name is a required parameter. Newly created spaces will have 0.0.0.0/0 set by default\nallowing all traffic to applications in the space. More than one CIDR block can be provided at\na time to the commands listed below. For example 1.2.3.4/20 and 5.6.7.8/20 can be added with:\n",
+        "helpLine": [
+          "trusted-ips [SPACE]",
+          "list trusted IP ranges for a space"
+        ]
+      },
+      {
+        "id": "trusted-ips:add",
+        "_version": "12.1.1",
+        "description": "Add one range to the list of trusted IP ranges",
+        "plugin": {
+          "name": "@heroku-cli/plugin-spaces",
+          "version": "2.12.2"
+        },
+        "hidden": false,
+        "aliases": [],
+        "help": "Usage: heroku trusted-ips:add SOURCE [flags]\n\nAdd one range to the list of trusted IP ranges\n\nFlags:\n -s, --space SPACE  space to add rule to\n --confirm CONFIRM  set to space name to bypass confirm prompt\n\nUses CIDR notation.\n\nExample:\n\n    $ heroku trusted-ips:add --space my-space 192.168.2.0/24\n    Added 192.168.0.1/24 to trusted IP ranges on my-space\n",
+        "helpLine": [
+          "trusted-ips:add SOURCE",
+          "Add one range to the list of trusted IP ranges"
+        ]
+      },
+      {
+        "id": "trusted-ips:remove",
+        "_version": "12.1.1",
+        "description": "Remove a range from the list of trusted IP ranges",
+        "plugin": {
+          "name": "@heroku-cli/plugin-spaces",
+          "version": "2.12.2"
+        },
+        "hidden": false,
+        "aliases": [],
+        "help": "Usage: heroku trusted-ips:remove SOURCE [flags]\n\nRemove a range from the list of trusted IP ranges\n\nFlags:\n --confirm CONFIRM  set to space name to bypass confirm prompt\n --space SPACE      space to remove rule from\n\nUses CIDR notation.\n\nExample:\n\n    $ heroku trusted-ips:remove --space my-space 192.168.2.0/24\n    Removed 192.168.2.0/24 from trusted IP ranges on my-space\n",
+        "helpLine": [
+          "trusted-ips:remove SOURCE",
+          "Remove a range from the list of trusted IP ranges"
+        ]
+      },
+      {
+        "id": "outbound-rules",
+        "_version": "12.1.1",
+        "description": "list Outbound Rules for a space",
+        "plugin": {
+          "name": "@heroku-cli/plugin-spaces",
+          "version": "2.12.2"
+        },
+        "hidden": false,
+        "aliases": [],
+        "help": "Usage: heroku outbound-rules [SPACE] [flags]\n\nlist Outbound Rules for a space\n\nFlags:\n -s, --space SPACE  space to get outbound rules from\n --json             output in json format\n\nOutbound Rules are only available on Private Spaces.\n\nNewly created spaces will have an \"Allow All\" rule set by default\nallowing all egress dyno traffic outside of the space.  You can\nremove this default rule to completely stop your private dynos from\ntalking to the world.\n\nYou can add specific rules that only allow your dyno to communicate with trusted hosts.\n",
+        "helpLine": [
+          "outbound-rules [SPACE]",
+          "list Outbound Rules for a space"
+        ]
+      },
+      {
+        "id": "outbound-rules:add",
+        "_version": "12.1.1",
+        "description": "Add outbound rules to a Private Space",
+        "plugin": {
+          "name": "@heroku-cli/plugin-spaces",
+          "version": "2.12.2"
+        },
+        "hidden": false,
+        "aliases": [],
+        "help": "Usage: heroku outbound-rules:add [flags]\n\nAdd outbound rules to a Private Space\n\nFlags:\n -s, --space SPACE    space to add rule to\n --confirm CONFIRM    set to space name to bypass confirm prompt\n --dest DEST          target CIDR block dynos are allowed to communicate with\n --port PORT          the port dynos are allowed to use when communicating with\n                      hosts in destination CIDR block. Accepts a range in\n                      `<lowest port>-<highest port>` format. 0 is the minimum.\n                      The maximum port allowed is 65535, except for ICMP with a\n                      maximum of 255.\n --protocol PROTOCOL  the protocol dynos are allowed to use when communicating\n                      with hosts in destination CIDR block. Valid protocols are\n                      \"tcp\", \"udp\", \"icmp\", \"0-255\" and \"any\".\n\nThe destination flag uses CIDR notation.\n\n Example:\n\n    $ heroku outbound-rules:add --space my-space --dest 192.168.2.0/24 --protocol tcp --port 80\n    Added 192.168.0.1/24 to the outbound rules on my-space\n\n Example with port range:\n\n    $ heroku outbound-rules:add --space my-space --dest 192.168.2.0/24 --protocol tcp --port 80-100\n    Added 192.168.0.1/24 to the outbound rules on my-space\n\n Example opening up everything\n\n    $ heroku outbound-rules:add --space my-space --dest 0.0.0.0/0 --protocol any --port any\n    Added 0.0.0.0/0 to the outbound rules on my-space\n\nICMP Rules\nThe ICMP protocol has types, not ports, but the underlying systems treat them as the same. For this reason,\nwhen you want to allow ICMP traffic you will use the --port flag to specify the ICMP types you want to\nallow. ICMP types are numbered, 0-255.\n",
+        "helpLine": [
+          "outbound-rules:add",
+          "Add outbound rules to a Private Space"
+        ]
+      },
+      {
+        "id": "outbound-rules:remove",
+        "_version": "12.1.1",
+        "description": "Remove a Rules from the list of Outbound Rules",
+        "plugin": {
+          "name": "@heroku-cli/plugin-spaces",
+          "version": "2.12.2"
+        },
+        "hidden": false,
+        "aliases": [],
+        "help": "Usage: heroku outbound-rules:remove RULENUMBER [flags]\n\nRemove a Rules from the list of Outbound Rules\n\nFlags:\n --confirm CONFIRM  set to space name to bypass confirm prompt\n --space SPACE      space to remove rule from\n\nExample:\n\n    $ heroku outbound-rules:remove --space my-space 4\n    Removed 192.168.2.0/24 from trusted IP ranges on my-space\n",
+        "helpLine": [
+          "outbound-rules:remove RULENUMBER",
+          "Remove a Rules from the list of Outbound Rules"
+        ]
+      }
+    ],
+    "topics": [
+      {
+        "name": "spaces",
+        "description": "manage heroku private spaces"
+      },
+      {
+        "name": "trusted-ips",
+        "hidden": true
+      }
+    ]
+  }
+}
